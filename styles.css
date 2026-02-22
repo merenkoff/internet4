@@ -48,6 +48,34 @@ body {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.lang-switch {
+  margin-left: auto;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,.2);
+  color: var(--muted);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 2px;
+  font-family: inherit;
+}
+
+.lang-btn:hover {
+  color: var(--fg);
+  border-color: rgba(255,255,255,.35);
+}
+
+.lang-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .logo {
@@ -172,9 +200,63 @@ body {
 }
 
 .next-note {
-  margin: 0;
+  margin: 0 0 1rem;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+/* Share */
+.share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.share-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.share-btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: color .15s, border-color .15s, background .15s;
+}
+
+.share-btn:hover {
+  color: var(--fg);
+  border-color: rgba(255,255,255,.35);
+  background: rgba(255,255,255,.05);
+}
+
+.share-btn svg {
+  flex-shrink: 0;
+}
+
+.share-copy {
+  width: auto;
+  padding: 0 0.75rem;
+  min-width: 6rem;
 }
 
 /* Footer */
@@ -187,6 +269,11 @@ body {
   margin: 0;
   font-size: 0.9rem;
   color: var(--muted);
+}
+
+.footer-contact {
+  font-size: 0.8rem;
+  opacity: 0.85;
 }
 
 .footer a {
