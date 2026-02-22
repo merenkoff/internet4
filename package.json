@@ -1,0 +1,14 @@
+{
+  "name": "own-net",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "serve . -p $PORT"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
