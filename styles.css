@@ -167,6 +167,115 @@ body {
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
 
+/* License */
+.license {
+  padding: 2rem 0 3rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.license h2 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.license-lead {
+  margin: 0 0 1.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 560px;
+}
+
+.license-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2.5rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 540px) {
+  .license-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.license-col-title {
+  margin: 0 0 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.license-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.license-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--fg);
+  opacity: 0.85;
+}
+
+.license-allow li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #5aaa77;
+  font-weight: 600;
+}
+
+.license-deny li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: #cc5555;
+  font-weight: 600;
+}
+
+.license-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding-top: 1rem;
+}
+
+.license-read {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+}
+
+.license-read a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity .15s;
+}
+
+.license-read a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+.license-note code {
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+  font-size: 0.85em;
+  color: var(--accent);
+  background: rgba(201,162,39,.1);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
 /* Next */
 .next {
   padding: 2rem 0 3rem;

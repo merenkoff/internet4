@@ -37,7 +37,19 @@
       nextNote: 'If these principles resonate with you — share the manifesto and be part of the movement.',
       shareLabel: 'Share',
       copyLink: 'Copy link',
-      copyDone: 'Copied!'
+      copyDone: 'Copied!',
+      licenseTitle: 'OwnNet Source License 1.0',
+      licenseLead: 'Our software is open — but not unconditional. The license is a direct extension of the manifesto: source code is available for study, improvement, and sharing, but may not be used to build systems that contradict what we stand for.',
+      licenseAllowedTitle: 'Permitted',
+      licAllow1: 'Study, fork, and contribute to the code',
+      licAllow2: 'Personal and educational use',
+      licAllow3: 'Derivative works — under the same license (ShareAlike)',
+      licenseDeniedTitle: 'Prohibited',
+      licDeny1: 'Use in Closed Systems: remote kill switches, forced lock-in, blocked modification',
+      licDeny2: 'Surveillance or data collection without explicit user consent',
+      licDeny3: 'Commercial use without prior written permission',
+      licenseNoteHTML: 'Full license text is included as a <code>LICENSE</code> file in every repository. © 2026 Serhii Merenkov / Technologies LLC.',
+      licReadFull: 'Read the full license →'
     },
     ru: {
       heroTitle: 'Открытый интернет для всех',
@@ -71,7 +83,19 @@
       nextNote: 'Если эти принципы вам близки — распространяйте манифест и будьте частью движения.',
       shareLabel: 'Поделиться',
       copyLink: 'Скопировать ссылку',
-      copyDone: 'Скопировано!'
+      copyDone: 'Скопировано!',
+      licenseTitle: 'OwnNet Source License 1.0',
+      licenseLead: 'Наше ПО открыто — но не безусловно. Лицензия — прямое продолжение манифеста: исходный код доступен для изучения, улучшения и распространения, но его нельзя использовать для создания систем, противоречащих нашим ценностям.',
+      licenseAllowedTitle: 'Разрешено',
+      licAllow1: 'Изучать, форкать и вносить вклад в код',
+      licAllow2: 'Личное и образовательное использование',
+      licAllow3: 'Производные работы — на тех же условиях (ShareAlike)',
+      licenseDeniedTitle: 'Запрещено',
+      licDeny1: 'Использование в «замкнутых системах»: удалённое отключение, принудительный lock-in, запрет модификации',
+      licDeny2: 'Слежка или сбор данных без явного согласия пользователя',
+      licDeny3: 'Коммерческое использование без письменного разрешения',
+      licenseNoteHTML: 'Полный текст лицензии включён как файл <code>LICENSE</code> в каждый репозиторий. © 2026 Serhii Merenkov / Technologies LLC.',
+      licReadFull: 'Читать полный текст лицензии →'
     },
     uk: {
       heroTitle: 'Відкритий інтернет для всіх',
@@ -105,7 +129,19 @@
       nextNote: 'Якщо ці принципи вам близькі — поширюйте маніфест і будьте частиною руху.',
       shareLabel: 'Поширити',
       copyLink: 'Скопіювати посилання',
-      copyDone: 'Скопійовано!'
+      copyDone: 'Скопійовано!',
+      licenseTitle: 'OwnNet Source License 1.0',
+      licenseLead: 'Наше ПЗ відкрите — але не безумовно. Ліцензія — пряме продовження маніфесту: вихідний код доступний для вивчення, покращення та поширення, але його не можна використовувати для створення систем, що суперечать нашим цінностям.',
+      licenseAllowedTitle: 'Дозволено',
+      licAllow1: 'Вивчати, форкати та робити внески до коду',
+      licAllow2: 'Особисте та освітнє використання',
+      licAllow3: 'Похідні роботи — на тих самих умовах (ShareAlike)',
+      licenseDeniedTitle: 'Заборонено',
+      licDeny1: 'Використання в «замкнених системах»: віддалені вимикачі, примусовий lock-in, заборона модифікації',
+      licDeny2: 'Стеження або збір даних без явної згоди користувача',
+      licDeny3: 'Комерційне використання без письмового дозволу',
+      licenseNoteHTML: 'Повний текст ліцензії включено як файл <code>LICENSE</code> у кожен репозиторій. © 2026 Serhii Merenkov / Technologies LLC.',
+      licReadFull: 'Читати повний текст ліцензії →'
     }
   };
 

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OwnNet Source License 1.0</title>
+  <meta name="description" content="OwnNet Source License 1.0 — open software license for the Open Internet 4.0 movement.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    [hidden] { display: none !important; }
+
+    .lic-nav {
+      padding: 1.75rem 0 0;
+    }
+
+    .lic-nav a {
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .15s;
+    }
+
+    .lic-nav a:hover {
+      color: var(--fg);
+    }
+
+    .lic-header {
+      padding: 2rem 0 2rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .lic-header h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .lic-header-meta {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    .lic-header-meta a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .lic-header-meta a:hover {
+      color: var(--fg);
+    }
+
+    .lic-doc {
+      padding-bottom: 4rem;
+    }
+
+    .lic-section {
+      padding: 2rem 0 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      margin-top: 2rem;
+    }
+
+    .lic-section h2 {
+      margin: 0 0 1.25rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+    }
+
+    .lic-section p {
+      margin: 0 0 0.85rem;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    .lic-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .lic-section a {
+      color: var(--fg);
+      text-decoration: none;
+    }
+
+    .lic-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* Definition list */
+    .lic-section dl {
+      margin: 0;
+    }
+
+    .lic-section dt {
+      font-weight: 600;
+      color: var(--fg);
+      margin-top: 1.25rem;
+      font-size: 0.93rem;
+    }
+
+    .lic-section dt:first-child {
+      margin-top: 0;
+    }
+
+    .lic-section dd {
+      margin: 0.35rem 0 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .lic-section dd ol {
+      margin: 0.6rem 0 0;
+      padding-left: 1.5rem;
+    }
+
+    .lic-section dd ol li {
+      margin-bottom: 0.45rem;
+      font-size: 0.9rem;
+    }
+
+    /* Numbered list */
+    .lic-list {
+      margin: 0;
+      padding-left: 1.5rem;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+
+    .lic-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Conditions */
+    ol.lic-conditions {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: cond;
+    }
+
+    ol.lic-conditions > li {
+      counter-increment: cond;
+      padding-left: 2.25rem;
+      position: relative;
+      margin-bottom: 1.75rem;
+    }
+
+    ol.lic-conditions > li:last-child {
+      margin-bottom: 0;
+    }
+
+    ol.lic-conditions > li::before {
+      content: counter(cond) ".";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    ol.lic-conditions > li > strong {
+      display: block;
+      color: var(--fg);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.6rem;
+    }
+
+    ol.lic-conditions p {
+      margin: 0 0 0.5rem;
+    }
+
+    ol.lic-conditions ul {
+      margin: 0.4rem 0 0;
+      padding-left: 1.25rem;
+      list-style: none;
+    }
+
+    ol.lic-conditions ul li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    ol.lic-conditions ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    ol.lic-conditions em {
+      color: var(--fg);
+      font-style: normal;
+    }
+
+    /* Disclaimer */
+    .lic-disclaimer {
+      font-size: 0.8rem !important;
+      line-height: 1.65 !important;
+      opacity: 0.7;
+    }
+
+    /* End marker */
+    .lic-end {
+      margin: 2.5rem 0 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+      font-size: 0.75rem;
+      color: var(--muted);
+      opacity: 0.45;
+      text-align: center;
+      letter-spacing: 0.07em;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <a href="/" class="logo">OwnNet</a>
+      <span class="tagline">Internet 4.0</span>
+      <nav class="lang-switch" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" class="lang-btn" data-lang="uk" aria-pressed="false">UA</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="lic-doc wrap">
+
+      <nav class="lic-nav">
+        <a href="/" data-i18n="licBackLink">← Back to manifesto</a>
+      </nav>
+
+      <header class="lic-header">
+        <h1>OwnNet Source License</h1>
+        <p class="lic-header-meta">
+          <span data-i18n="licVersion">Version 1.0, May 2026</span><br>
+          Copyright © 2026 Serhii Merenkov / LIMITED LIABILITY COMPANY "Technologies"<br>
+          <a href="https://own-net.com/">https://own-net.com/</a>
+        </p>
+      </header>
+
+      <!-- ── PREAMBLE ── -->
+      <section class="lic-section" id="preamble">
+        <h2 data-i18n="licPreambleTitle">Preamble</h2>
+
+        <div data-for-lang="en">
+          <p>This software is published in the spirit of the Open Internet 4.0 movement. The authors believe that digital tools must respect user sovereignty: devices must work without continuous corporate permission, data must be portable, and software must be auditable, repairable, and forkable.</p>
+          <p>The source code is open for study, personal use, and community contribution. However, it may not be used to build systems that contradict these values. Using this software to create products with remote kill switches, forced vendor lock-in, or barriers to user ownership is explicitly prohibited.</p>
+          <p>Full manifesto: <a href="https://own-net.com/">https://own-net.com/</a></p>
+        </div>
+
+        <div data-for-lang="ru" hidden>
+          <p>Данное программное обеспечение публикуется в духе движения Open Internet 4.0. Авторы считают, что цифровые инструменты должны уважать суверенитет пользователя: устройства должны работать без постоянного корпоративного разрешения, данные должны быть переносимыми, а программное обеспечение — проверяемым, ремонтопригодным и доступным для форкинга.</p>
+          <p>Исходный код открыт для изучения, личного использования и участия сообщества. Однако он не может использоваться для создания систем, противоречащих этим ценностям. Использование данного ПО для создания продуктов с удалёнными выключателями, принудительной привязкой к поставщику или барьерами для прав владения пользователями прямо запрещено.</p>
+          <p>Полный манифест: <a href="https://own-net.com/">https://own-net.com/</a></p>
+        </div>
+
+        <div data-for-lang="uk" hidden>
+          <p>Дане програмне забезпечення публікується в дусі руху Open Internet 4.0. Автори вважають, що цифрові інструменти повинні поважати суверенітет користувача: пристрої повинні працювати без постійного корпоративного дозволу, дані повинні бути переносними, а програмне забезпечення — перевірюваним, придатним до ремонту та форкування.</p>
+          <p>Вихідний код відкритий для вивчення, особистого використання та участі спільноти. Проте він не може використовуватися для створення систем, що суперечать цим цінностям. Використання даного ПЗ для створення продуктів з віддаленими вимикачами, примусовим прив'язуванням до постачальника або бар'єрами для прав власності користувачів прямо заборонено.</p>
+          <p>Повний маніфест: <a href="https://own-net.com/">https://own-net.com/</a></p>
+        </div>
+      </section>
+
+      <!-- ── DEFINITIONS ── -->
+      <section class="lic-section" id="definitions">
+        <h2 data-i18n="licDefsTitle">Definitions</h2>
+
+        <div data-for-lang="en">
+          <dl>
+            <dt>"Software"</dt>
+            <dd>means the source code, compiled binaries, documentation, and any associated files distributed under this license.</dd>
+            <dt>"Derivative Work"</dt>
+            <dd>means any work that incorporates, modifies, or is based upon the Software or any substantial portion of it.</dd>
+            <dt>"Closed System"</dt>
+            <dd>means any product, service, platform, or system that:
+              <ol type="a">
+                <li>implements remote kill switches or requires continuous third-party authorization for basic operation of user-owned devices or software;</li>
+                <li>locks user data in proprietary formats without providing a documented, machine-readable export mechanism;</li>
+                <li>prevents users from inspecting, modifying, or replacing the software running on hardware they own;</li>
+                <li>creates artificial interoperability barriers where open alternatives exist, for the purpose of vendor lock-in;</li>
+                <li>monitors or transmits user activity without explicit, informed, and revocable user consent.</li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+
+        <div data-for-lang="ru" hidden>
+          <dl>
+            <dt>«Программное обеспечение»</dt>
+            <dd>означает исходный код, скомпилированные двоичные файлы, документацию и любые связанные файлы, распространяемые по данной лицензии.</dd>
+            <dt>«Производная работа»</dt>
+            <dd>означает любую работу, которая включает, изменяет или основана на Программном обеспечении или его значительной части.</dd>
+            <dt>«Замкнутая система»</dt>
+            <dd>означает любой продукт, услугу, платформу или систему, которая:
+              <ol type="a">
+                <li>реализует удалённые выключатели или требует постоянной авторизации третьей стороной для базовой работы устройств или программ, принадлежащих пользователю;</li>
+                <li>блокирует данные пользователя в проприетарных форматах без предоставления задокументированного, машиночитаемого механизма экспорта;</li>
+                <li>препятствует пользователям в проверке, изменении или замене программного обеспечения на принадлежащем им оборудовании;</li>
+                <li>создаёт искусственные барьеры совместимости там, где существуют открытые альтернативы, с целью привязки к поставщику;</li>
+                <li>отслеживает или передаёт активность пользователя без явного, осознанного и отзываемого согласия пользователя.</li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+
+        <div data-for-lang="uk" hidden>
+          <dl>
+            <dt>«Програмне забезпечення»</dt>
+            <dd>означає вихідний код, скомпільовані двійкові файли, документацію та будь-які пов'язані файли, що розповсюджуються за даною ліцензією.</dd>
+            <dt>«Похідна робота»</dt>
+            <dd>означає будь-яку роботу, що включає, змінює або базується на Програмному забезпеченні або його значній частині.</dd>
+            <dt>«Замкнена система»</dt>
+            <dd>означає будь-який продукт, послугу, платформу або систему, яка:
+              <ol type="a">
+                <li>реалізує віддалені вимикачі або вимагає постійної авторизації третьою стороною для базової роботи пристроїв або програм, що належать користувачеві;</li>
+                <li>блокує дані користувача у пропрієтарних форматах без надання задокументованого, машиночитаного механізму експорту;</li>
+                <li>перешкоджає користувачам у перевірці, зміні або заміні програмного забезпечення на обладнанні, яке їм належить;</li>
+                <li>створює штучні бар'єри сумісності там, де існують відкриті альтернативи, з метою прив'язки до постачальника;</li>
+                <li>відстежує або передає активність користувача без явної, усвідомленої та відкличної згоди користувача.</li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ── GRANT OF RIGHTS ── -->
+      <section class="lic-section" id="grant">
+        <h2 data-i18n="licGrantTitle">Grant of Rights</h2>
+
+        <div data-for-lang="en">
+          <p>Subject to the conditions in this license, the copyright holders grant you a worldwide, royalty-free, non-exclusive license to:</p>
+          <ol class="lic-list">
+            <li>Use the Software for personal, educational, and non-commercial research purposes.</li>
+            <li>Copy and distribute verbatim copies of the Software and this license.</li>
+            <li>Study and inspect the source code for any purpose.</li>
+            <li>Modify the Software and distribute Derivative Works, provided all conditions of this license are satisfied.</li>
+            <li>Contribute modifications back to the original project.</li>
+          </ol>
+        </div>
+
+        <div data-for-lang="ru" hidden>
+          <p>При соблюдении условий данной лицензии правообладатели предоставляют вам всемирную, безвозмездную, неисключительную лицензию на:</p>
+          <ol class="lic-list">
+            <li>Использование Программного обеспечения в личных, образовательных и некоммерческих исследовательских целях.</li>
+            <li>Копирование и распространение дословных копий Программного обеспечения и данной лицензии.</li>
+            <li>Изучение и проверку исходного кода в любых целях.</li>
+            <li>Изменение Программного обеспечения и распространение Производных работ при условии соблюдения всех условий данной лицензии.</li>
+            <li>Внесение изменений обратно в оригинальный проект.</li>
+          </ol>
+        </div>
+
+        <div data-for-lang="uk" hidden>
+          <p>За дотримання умов даної ліцензії правовласники надають вам всесвітню, безоплатну, невиключну ліцензію на:</p>
+          <ol class="lic-list">
+            <li>Використання Програмного забезпечення в особистих, освітніх та некомерційних дослідницьких цілях.</li>
+            <li>Копіювання та розповсюдження дослівних копій Програмного забезпечення та даної ліцензії.</li>
+            <li>Вивчення та перевірку вихідного коду в будь-яких цілях.</li>
+            <li>Зміну Програмного забезпечення та розповсюдження Похідних робіт за умови дотримання всіх умов даної ліцензії.</li>
+            <li>Внесення змін назад до оригінального проекту.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ── CONDITIONS ── -->
+      <section class="lic-section" id="conditions">
+        <h2 data-i18n="licCondTitle">Conditions</h2>
+
+        <div data-for-lang="en">
+          <ol class="lic-conditions">
+            <li>
+              <strong>Attribution</strong>
+              <p>All copies and Derivative Works must:</p>
+              <ul>
+                <li>Retain this license file in full.</li>
+                <li>Retain the original copyright notice.</li>
+                <li>Include a visible attribution in any documentation or "About" section:<br>
+                <em>"Based on software by Serhii Merenkov / Technologies LLC (own-net.com)"</em></li>
+              </ul>
+            </li>
+            <li>
+              <strong>Open Internet Compatibility</strong>
+              <p>You may <strong>NOT</strong> use the Software, in whole or in part, as a component of a Closed System as defined above. This restriction applies regardless of whether the Closed System is commercial or non-commercial, open-source or proprietary.</p>
+              <p>If you are uncertain whether your use qualifies, contact the authors at <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> before proceeding.</p>
+            </li>
+            <li>
+              <strong>Commercial Use</strong>
+              <p>Commercial use — including incorporation into products sold, licensed, or offered as a paid service — requires prior written permission from the copyright holders.</p>
+              <p>Contact: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+            </li>
+            <li>
+              <strong>ShareAlike</strong>
+              <p>Any Derivative Work distributed to third parties must be released under this license (OwnNet Source License 1.0) or a later version thereof. You may not apply additional restrictions that limit recipients' rights beyond what this license already allows.</p>
+            </li>
+            <li>
+              <strong>No Misrepresentation</strong>
+              <p>You may not use the name "OwnNet", the OwnNet project name, or the names of the copyright holders to endorse or promote Derivative Works without prior written consent.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div data-for-lang="ru" hidden>
+          <ol class="lic-conditions">
+            <li>
+              <strong>Атрибуция</strong>
+              <p>Все копии и Производные работы должны:</p>
+              <ul>
+                <li>Сохранять данный файл лицензии в полном объёме.</li>
+                <li>Сохранять оригинальное уведомление об авторских правах.</li>
+                <li>Включать видимую атрибуцию в любую документацию или раздел «О программе»:<br>
+                <em>«Основано на программном обеспечении Serhii Merenkov / Technologies LLC (own-net.com)»</em></li>
+              </ul>
+            </li>
+            <li>
+              <strong>Совместимость с открытым интернетом</strong>
+              <p>Вы <strong>НЕ МОЖЕТЕ</strong> использовать Программное обеспечение, полностью или частично, как компонент Замкнутой системы, как определено выше. Это ограничение применяется независимо от того, является ли Замкнутая система коммерческой или некоммерческой, с открытым или закрытым исходным кодом.</p>
+              <p>Если вы не уверены, соответствует ли ваше использование условиям лицензии, свяжитесь с авторами по адресу <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> до начала использования.</p>
+            </li>
+            <li>
+              <strong>Коммерческое использование</strong>
+              <p>Коммерческое использование — включая включение в продукты, продаваемые, лицензируемые или предлагаемые в качестве платного сервиса — требует предварительного письменного разрешения правообладателей.</p>
+              <p>Контакт: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+            </li>
+            <li>
+              <strong>ShareAlike (на тех же условиях)</strong>
+              <p>Любая Производная работа, распространяемая третьим лицам, должна выпускаться под данной лицензией (OwnNet Source License 1.0) или её более поздней версией. Вы не можете накладывать дополнительные ограничения, которые ограничивают права получателей сверх того, что уже разрешено данной лицензией.</p>
+            </li>
+            <li>
+              <strong>Запрет на ложное представление</strong>
+              <p>Вы не можете использовать название «OwnNet», название проекта OwnNet или имена правообладателей для поддержки или продвижения Производных работ без предварительного письменного согласия.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div data-for-lang="uk" hidden>
+          <ol class="lic-conditions">
+            <li>
+              <strong>Атрибуція</strong>
+              <p>Усі копії та Похідні роботи повинні:</p>
+              <ul>
+                <li>Зберігати даний файл ліцензії повністю.</li>
+                <li>Зберігати оригінальне повідомлення про авторські права.</li>
+                <li>Включати видиму атрибуцію в будь-яку документацію або розділ «Про програму»:<br>
+                <em>«Засновано на програмному забезпеченні Serhii Merenkov / Technologies LLC (own-net.com)»</em></li>
+              </ul>
+            </li>
+            <li>
+              <strong>Сумісність з відкритим інтернетом</strong>
+              <p>Ви <strong>НЕ МОЖЕТЕ</strong> використовувати Програмне забезпечення, повністю або частково, як компонент Замкненої системи, як визначено вище. Це обмеження застосовується незалежно від того, чи є Замкнена система комерційною або некомерційною, з відкритим або закритим вихідним кодом.</p>
+              <p>Якщо ви не впевнені, чи відповідає ваше використання умовам ліцензії, зв'яжіться з авторами за адресою <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> до початку використання.</p>
+            </li>
+            <li>
+              <strong>Комерційне використання</strong>
+              <p>Комерційне використання — включаючи включення до продуктів, що продаються, ліцензуються або пропонуються як платний сервіс — вимагає попереднього письмового дозволу правовласників.</p>
+              <p>Контакт: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+            </li>
+            <li>
+              <strong>ShareAlike (на тих самих умовах)</strong>
+              <p>Будь-яка Похідна робота, що розповсюджується третім особам, повинна випускатися під даною ліцензією (OwnNet Source License 1.0) або її пізнішою версією. Ви не можете накладати додаткові обмеження, що обмежують права отримувачів понад те, що вже дозволено даною ліцензією.</p>
+            </li>
+            <li>
+              <strong>Заборона на неправдиве представлення</strong>
+              <p>Ви не можете використовувати назву «OwnNet», назву проекту OwnNet або імена правовласників для підтримки або просування Похідних робіт без попередньої письменої згоди.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ── DISCLAIMER ── -->
+      <section class="lic-section" id="disclaimer">
+        <h2 data-i18n="licDisclTitle">Disclaimer of Warranties</h2>
+
+        <div data-for-lang="en">
+          <p class="lic-disclaimer">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+
+        <div data-for-lang="ru" hidden>
+          <p class="lic-disclaimer">ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ ГАРАНТИЯМИ ТОВАРНОЙ ПРИГОДНОСТИ, ПРИГОДНОСТИ ДЛЯ КОНКРЕТНЫХ ЦЕЛЕЙ И НЕНАРУШЕНИЯ ПРАВ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ИНУЮ ОТВЕТСТВЕННОСТЬ, ВОЗНИКАЮЩУЮ ИЗ ДОГОВОРА, ДЕЛИКТА ИЛИ ИНЫМ ОБРАЗОМ, В СВЯЗИ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ ИЛИ ЕГО ИСПОЛЬЗОВАНИЕМ.</p>
+        </div>
+
+        <div data-for-lang="uk" hidden>
+          <p class="lic-disclaimer">ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ НАДАЄТЬСЯ «ЯК Є», БЕЗ БУДЬ-ЯКИХ ГАРАНТІЙ, ЯВНИХ АБО НЕЯВНИХ, ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ ГАРАНТІЯМИ ТОВАРНОЇ ПРИДАТНОСТІ, ПРИДАТНОСТІ ДЛЯ КОНКРЕТНИХ ЦІЛЕЙ ТА НЕНАРУШЕННЯ ПРАВ. НІ ЗА ЯКИХ ОБСТАВИН АВТОРИ АБО ПРАВОВЛАСНИКИ НЕ НЕСУТЬ ВІДПОВІДАЛЬНОСТІ ЗА БУДЬ-ЯКІ ПРЕТЕНЗІЇ, ЗБИТКИ АБО ІНШУ ВІДПОВІДАЛЬНІСТЬ, ЩО ВИНИКАЄ З ДОГОВОРУ, ДЕЛІКТНИХ АБО ІНШИХ ПІДСТАВ, ПОВ'ЯЗАНИХ З ПРОГРАМНИМ ЗАБЕЗПЕЧЕННЯМ АБО ЙОГО ВИКОРИСТАННЯМ.</p>
+        </div>
+      </section>
+
+      <!-- ── GOVERNING LAW ── -->
+      <section class="lic-section" id="governing-law">
+        <h2 data-i18n="licGovTitle">Governing Law</h2>
+
+        <div data-for-lang="en">
+          <p>This license is governed by the laws of Ukraine. Any disputes arising from or related to this license shall be subject to the jurisdiction of the courts of Ukraine.</p>
+        </div>
+
+        <div data-for-lang="ru" hidden>
+          <p>Данная лицензия регулируется законодательством Украины. Любые споры, возникающие в связи с данной лицензией или связанные с ней, подлежат рассмотрению судами Украины.</p>
+        </div>
+
+        <div data-for-lang="uk" hidden>
+          <p>Дана ліцензія регулюється законодавством України. Будь-які суперечки, що виникають у зв'язку з даною ліцензією або пов'язані з нею, підлягають розгляду судами України.</p>
+        </div>
+      </section>
+
+      <p class="lic-end" data-i18n="licEnd">END OF OwnNet SOURCE LICENSE VERSION 1.0</p>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><a href="https://own-net.com">own-net.com</a> — OwnNet / Internet 4.0 · <span class="footer-contact"><a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> (Serg Meo)</span></p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var STORAGE_KEY = 'ownnet-lang';
+    var supported = { en: true, ru: true, uk: true };
+
+    var t = {
+      en: {
+        licPageTitle: 'OwnNet Source License 1.0',
+        licVersion: 'Version 1.0, May 2026',
+        licPreambleTitle: 'Preamble',
+        licDefsTitle: 'Definitions',
+        licGrantTitle: 'Grant of Rights',
+        licCondTitle: 'Conditions',
+        licDisclTitle: 'Disclaimer of Warranties',
+        licGovTitle: 'Governing Law',
+        licBackLink: '← Back to manifesto',
+        licEnd: 'END OF OwnNet SOURCE LICENSE VERSION 1.0'
+      },
+      ru: {
+        licPageTitle: 'OwnNet Source License 1.0 — лицензия',
+        licVersion: 'Версия 1.0, Май 2026',
+        licPreambleTitle: 'Преамбула',
+        licDefsTitle: 'Определения',
+        licGrantTitle: 'Предоставление прав',
+        licCondTitle: 'Условия',
+        licDisclTitle: 'Отказ от гарантий',
+        licGovTitle: 'Применимое право',
+        licBackLink: '← Назад к манифесту',
+        licEnd: 'КОНЕЦ OwnNet SOURCE LICENSE ВЕРСИИ 1.0'
+      },
+      uk: {
+        licPageTitle: 'OwnNet Source License 1.0 — ліцензія',
+        licVersion: 'Версія 1.0, Травень 2026',
+        licPreambleTitle: 'Преамбула',
+        licDefsTitle: 'Визначення',
+        licGrantTitle: 'Надання прав',
+        licCondTitle: 'Умови',
+        licDisclTitle: 'Відмова від гарантій',
+        licGovTitle: 'Застосовне право',
+        licBackLink: '← Назад до маніфесту',
+        licEnd: 'КІНЕЦЬ OwnNet SOURCE LICENSE ВЕРСІЇ 1.0'
+      }
+    };
+
+    function getPreferredLang() {
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && supported[saved]) return saved;
+      var browser = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+      if (browser === 'uk' || browser === 'ru') return browser;
+      return 'en';
+    }
+
+    function applyLang(lang) {
+      if (!supported[lang]) lang = 'en';
+      document.documentElement.lang = lang === 'uk' ? 'uk' : lang === 'ru' ? 'ru' : 'en';
+      var strings = t[lang];
+
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (strings[key] !== undefined) el.textContent = strings[key];
+      });
+
+      document.querySelectorAll('[data-for-lang]').forEach(function (el) {
+        el.hidden = el.getAttribute('data-for-lang') !== lang;
+      });
+
+      document.title = strings.licPageTitle;
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        var isActive = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      localStorage.setItem(STORAGE_KEY, lang);
+    }
+
+    var lang = getPreferredLang();
+    applyLang(lang);
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        applyLang(btn.getAttribute('data-lang'));
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
