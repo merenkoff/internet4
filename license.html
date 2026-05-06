@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OwnNet Source License 1.0</title>
-  <meta name="description" content="OwnNet Source License 1.0 — open software license for the Open Internet 4.0 movement.">
+  <meta name="description" content="OwnNet Source License 1.0 (Source Available Edition) — license for the Open Internet 4.0 movement.">
   <link rel="stylesheet" href="styles.css">
   <style>
     [hidden] { display: none !important; }
@@ -30,10 +30,16 @@
     }
 
     .lic-header h1 {
-      margin: 0 0 0.75rem;
+      margin: 0 0 0.35rem;
       font-size: clamp(1.5rem, 3.5vw, 2rem);
       font-weight: 600;
       line-height: 1.2;
+    }
+
+    .lic-edition {
+      margin: 0 0 0.85rem;
+      font-size: 0.95rem;
+      color: var(--muted);
     }
 
     .lic-header-meta {
@@ -135,6 +141,28 @@
 
     .lic-list li {
       margin-bottom: 0.6rem;
+    }
+
+    .lic-bullet-list {
+      margin: 0.4rem 0 1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .lic-bullet-list li {
+      margin-bottom: 0.45rem;
+      padding-left: 1.25rem;
+      position: relative;
+      font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .lic-bullet-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
     }
 
     /* Conditions */
@@ -247,7 +275,8 @@
       </nav>
 
       <header class="lic-header">
-        <h1>OwnNet Source License</h1>
+        <h1 data-i18n="licMainTitle">OwnNet Source License 1.0</h1>
+        <p class="lic-edition" data-i18n="licEdition">(Source Available Edition)</p>
         <p class="lic-header-meta">
           <span data-i18n="licVersion">Version 1.0, May 2026</span><br>
           Copyright © 2026 Serhii Merenkov / LIMITED LIABILITY COMPANY "Technologies"<br>
@@ -255,25 +284,42 @@
         </p>
       </header>
 
+      <!-- ── NOTICE ── -->
+      <section class="lic-section" id="notice">
+        <h2 data-i18n="licNoticeTitle">Notice</h2>
+
+        <div data-for-lang="en">
+          <p>This is a Source Available license, not an Open Source license as defined by the Open Source Initiative (OSI). The source code is publicly visible for transparency, security audit, and community contribution, but commercial use requires a separate written agreement with the copyright holder.</p>
+        </div>
+
+        <div data-for-lang="ru" hidden>
+          <p>Это лицензия типа «Source Available» (доступный исходный код), а не лицензия Open Source в понимании Open Source Initiative (OSI). Исходный код открыт для прозрачности, аудита безопасности и участия сообщества, однако коммерческое использование требует отдельного письменного соглашения с правообладателем.</p>
+        </div>
+
+        <div data-for-lang="uk" hidden>
+          <p>Це ліцензія типу Source Available (доступний вихідний код), а не ліцензія Open Source за визначенням Open Source Initiative (OSI). Вихідний код публічно доступний для прозорості, аудиту безпеки та участі спільноти, проте комерційне використання вимагає окремої письмової угоди з правовласником.</p>
+        </div>
+      </section>
+
       <!-- ── PREAMBLE ── -->
       <section class="lic-section" id="preamble">
         <h2 data-i18n="licPreambleTitle">Preamble</h2>
 
         <div data-for-lang="en">
           <p>This software is published in the spirit of the Open Internet 4.0 movement. The authors believe that digital tools must respect user sovereignty: devices must work without continuous corporate permission, data must be portable, and software must be auditable, repairable, and forkable.</p>
-          <p>The source code is open for study, personal use, and community contribution. However, it may not be used to build systems that contradict these values. Using this software to create products with remote kill switches, forced vendor lock-in, or barriers to user ownership is explicitly prohibited.</p>
+          <p>The source code is open for study, personal use, and community contribution. However, commercial exploitation of this software without the author's knowledge and consent is explicitly prohibited.</p>
           <p>Full manifesto: <a href="https://own-net.com/">https://own-net.com/</a></p>
         </div>
 
         <div data-for-lang="ru" hidden>
           <p>Данное программное обеспечение публикуется в духе движения Open Internet 4.0. Авторы считают, что цифровые инструменты должны уважать суверенитет пользователя: устройства должны работать без постоянного корпоративного разрешения, данные должны быть переносимыми, а программное обеспечение — проверяемым, ремонтопригодным и доступным для форкинга.</p>
-          <p>Исходный код открыт для изучения, личного использования и участия сообщества. Однако он не может использоваться для создания систем, противоречащих этим ценностям. Использование данного ПО для создания продуктов с удалёнными выключателями, принудительной привязкой к поставщику или барьерами для прав владения пользователями прямо запрещено.</p>
+          <p>Исходный код открыт для изучения, личного использования и участия сообщества. Однако коммерческая эксплуатация данного программного обеспечения без ведома и согласия автора прямо запрещена.</p>
           <p>Полный манифест: <a href="https://own-net.com/">https://own-net.com/</a></p>
         </div>
 
         <div data-for-lang="uk" hidden>
           <p>Дане програмне забезпечення публікується в дусі руху Open Internet 4.0. Автори вважають, що цифрові інструменти повинні поважати суверенітет користувача: пристрої повинні працювати без постійного корпоративного дозволу, дані повинні бути переносними, а програмне забезпечення — перевірюваним, придатним до ремонту та форкування.</p>
-          <p>Вихідний код відкритий для вивчення, особистого використання та участі спільноти. Проте він не може використовуватися для створення систем, що суперечать цим цінностям. Використання даного ПЗ для створення продуктів з віддаленими вимикачами, примусовим прив'язуванням до постачальника або бар'єрами для прав власності користувачів прямо заборонено.</p>
+          <p>Вихідний код відкритий для вивчення, особистого використання та участі спільноти. Проте комерційна експлуатація цього програмного забезпечення без відома та згоди автора прямо заборонена.</p>
           <p>Повний маніфест: <a href="https://own-net.com/">https://own-net.com/</a></p>
         </div>
       </section>
@@ -288,14 +334,17 @@
             <dd>means the source code, compiled binaries, documentation, and any associated files distributed under this license.</dd>
             <dt>"Derivative Work"</dt>
             <dd>means any work that incorporates, modifies, or is based upon the Software or any substantial portion of it.</dd>
+            <dt>"Commercial Use"</dt>
+            <dd>means any use of the Software or Derivative Work in which the person or organization using it has an Annual Gross Revenue exceeding USD $100,000 (one hundred thousand US dollars), or where the Software or Derivative Work is directly sold, licensed, or offered as a paid product or paid service, regardless of the organization's total revenue.</dd>
+            <dt>"Annual Gross Revenue"</dt>
+            <dd>means the total gross revenue of the legal entity exercising rights under this license, including all affiliated entities under common ownership or control, during the most recent twelve-month fiscal period.</dd>
             <dt>"Closed System"</dt>
             <dd>means any product, service, platform, or system that:
               <ol type="a">
-                <li>implements remote kill switches or requires continuous third-party authorization for basic operation of user-owned devices or software;</li>
-                <li>locks user data in proprietary formats without providing a documented, machine-readable export mechanism;</li>
-                <li>prevents users from inspecting, modifying, or replacing the software running on hardware they own;</li>
-                <li>creates artificial interoperability barriers where open alternatives exist, for the purpose of vendor lock-in;</li>
-                <li>monitors or transmits user activity without explicit, informed, and revocable user consent.</li>
+                <li>implements remote kill switches or requires continuous third-party server authorization for basic operation of user-owned devices or software, where such authorization can be revoked without the user's consent;</li>
+                <li>stores user data exclusively in undocumented proprietary formats without providing a documented, machine-readable export mechanism that the user can invoke at will;</li>
+                <li>cryptographically prevents users from inspecting, modifying, or replacing the software running on hardware they have purchased;</li>
+                <li>monitors or transmits user activity, usage patterns, or personal data without explicit, informed, and independently revocable user consent.</li>
               </ol>
             </dd>
           </dl>
@@ -307,14 +356,17 @@
             <dd>означает исходный код, скомпилированные двоичные файлы, документацию и любые связанные файлы, распространяемые по данной лицензии.</dd>
             <dt>«Производная работа»</dt>
             <dd>означает любую работу, которая включает, изменяет или основана на Программном обеспечении или его значительной части.</dd>
+            <dt>«Коммерческое использование»</dt>
+            <dd>означает любое использование Программного обеспечения или Производной работы, при котором лицо или организация, использующие их, имеют годовой валовой доход (Annual Gross Revenue), превышающий 100&nbsp;000 долларов США, либо при котором Программное обеспечение или Производная работа непосредственно продаётся, лицензируется или предлагается как платный продукт или платная услуга, независимо от общего дохода организации.</dd>
+            <dt>«Годовой валовой доход» (Annual Gross Revenue)</dt>
+            <dd>означает совокупный валовой доход юридического лица, осуществляющего права по данной лицензии, включая все аффилированные лица при общем владении или контроле, за последний двенадцатимесячный отчётный период.</dd>
             <dt>«Замкнутая система»</dt>
             <dd>означает любой продукт, услугу, платформу или систему, которая:
               <ol type="a">
-                <li>реализует удалённые выключатели или требует постоянной авторизации третьей стороной для базовой работы устройств или программ, принадлежащих пользователю;</li>
-                <li>блокирует данные пользователя в проприетарных форматах без предоставления задокументированного, машиночитаемого механизма экспорта;</li>
-                <li>препятствует пользователям в проверке, изменении или замене программного обеспечения на принадлежащем им оборудовании;</li>
-                <li>создаёт искусственные барьеры совместимости там, где существуют открытые альтернативы, с целью привязки к поставщику;</li>
-                <li>отслеживает или передаёт активность пользователя без явного, осознанного и отзываемого согласия пользователя.</li>
+                <li>реализует удалённые выключатели или требует постоянной авторизации сервером третьей стороны для базовой работы устройств или программ, принадлежащих пользователю, при этом такая авторизация может быть отозвана без согласия пользователя;</li>
+                <li>хранит данные пользователя исключительно в недокументированных проприетарных форматах без предоставления задокументированного, машиночитаемого механизма экспорта, который пользователь может инициировать по своему усмотрению;</li>
+                <li>криптографически препятствует пользователям в проверке, изменении или замене программного обеспечения на приобретённом ими оборудовании;</li>
+                <li>отслеживает или передаёт активность пользователя, шаблоны использования или персональные данные без явного, осознанного и независимо отзываемого согласия пользователя.</li>
               </ol>
             </dd>
           </dl>
@@ -326,14 +378,17 @@
             <dd>означає вихідний код, скомпільовані двійкові файли, документацію та будь-які пов'язані файли, що розповсюджуються за даною ліцензією.</dd>
             <dt>«Похідна робота»</dt>
             <dd>означає будь-яку роботу, що включає, змінює або базується на Програмному забезпеченні або його значній частині.</dd>
+            <dt>«Комерційне використання»</dt>
+            <dd>означає будь-яке використання Програмного забезпечення або Похідної роботи, за якого особа чи організація, що їх використовує, має річний валовий дохід (Annual Gross Revenue), що перевищує 100&nbsp;000 доларів США, або за якого Програмне забезпечення або Похідна робота безпосередньо продаються, ліцензуються або пропонуються як платний продукт чи платна послуга, незалежно від загального доходу організації.</dd>
+            <dt>«Річний валовий дохід» (Annual Gross Revenue)</dt>
+            <dd>означає сукупний валовий дохід юридичної особи, що здійснює права за даною ліцензією, включно з усіма афілійованими особами за спільного володіння або контролю, за останній дванадцятимісячний звітний період.</dd>
             <dt>«Замкнена система»</dt>
             <dd>означає будь-який продукт, послугу, платформу або систему, яка:
               <ol type="a">
-                <li>реалізує віддалені вимикачі або вимагає постійної авторизації третьою стороною для базової роботи пристроїв або програм, що належать користувачеві;</li>
-                <li>блокує дані користувача у пропрієтарних форматах без надання задокументованого, машиночитаного механізму експорту;</li>
-                <li>перешкоджає користувачам у перевірці, зміні або заміні програмного забезпечення на обладнанні, яке їм належить;</li>
-                <li>створює штучні бар'єри сумісності там, де існують відкриті альтернативи, з метою прив'язки до постачальника;</li>
-                <li>відстежує або передає активність користувача без явної, усвідомленої та відкличної згоди користувача.</li>
+                <li>реалізує віддалені вимикачі або вимагає постійної авторизації сервером третьої сторони для базової роботи пристроїв або програм, що належать користувачеві, при цьому така авторизація може бути відкликана без згоди користувача;</li>
+                <li>зберігає дані користувача виключно в недокументованих пропрієтарних форматах без надання задокументованого, машиночитаного механізму експорту, який користувач може ініціювати за власним бажанням;</li>
+                <li>криптографічно перешкоджає користувачам у перевірці, зміні або заміні програмного забезпечення на обладнанні, яке вони придбали;</li>
+                <li>відстежує або передає активність користувача, шаблони використання або персональні дані без явної, усвідомленої та незалежно відкличної згоди користувача.</li>
               </ol>
             </dd>
           </dl>
@@ -347,33 +402,36 @@
         <div data-for-lang="en">
           <p>Subject to the conditions in this license, the copyright holders grant you a worldwide, royalty-free, non-exclusive license to:</p>
           <ol class="lic-list">
-            <li>Use the Software for personal, educational, and non-commercial research purposes.</li>
+            <li>Use the Software for personal, educational, and non-commercial research purposes without restriction.</li>
+            <li>Use the Software in any project or organization whose Annual Gross Revenue does not exceed USD $100,000, provided the Software is not directly sold or licensed as a standalone product or service.</li>
             <li>Copy and distribute verbatim copies of the Software and this license.</li>
             <li>Study and inspect the source code for any purpose.</li>
             <li>Modify the Software and distribute Derivative Works, provided all conditions of this license are satisfied.</li>
-            <li>Contribute modifications back to the original project.</li>
+            <li>Contribute modifications back to the original project under the terms agreed upon by the copyright holders.</li>
           </ol>
         </div>
 
         <div data-for-lang="ru" hidden>
           <p>При соблюдении условий данной лицензии правообладатели предоставляют вам всемирную, безвозмездную, неисключительную лицензию на:</p>
           <ol class="lic-list">
-            <li>Использование Программного обеспечения в личных, образовательных и некоммерческих исследовательских целях.</li>
+            <li>Использование Программного обеспечения в личных, образовательных и некоммерческих исследовательских целях без ограничений.</li>
+            <li>Использование Программного обеспечения в любом проекте или организации, чей годовой валовой доход не превышает 100&nbsp;000 долларов США, при условии, что Программное обеспечение не продаётся и не лицензируется непосредственно как самостоятельный продукт или услуга.</li>
             <li>Копирование и распространение дословных копий Программного обеспечения и данной лицензии.</li>
             <li>Изучение и проверку исходного кода в любых целях.</li>
             <li>Изменение Программного обеспечения и распространение Производных работ при условии соблюдения всех условий данной лицензии.</li>
-            <li>Внесение изменений обратно в оригинальный проект.</li>
+            <li>Внесение изменений обратно в оригинальный проект на условиях, согласованных с правообладателями.</li>
           </ol>
         </div>
 
         <div data-for-lang="uk" hidden>
           <p>За дотримання умов даної ліцензії правовласники надають вам всесвітню, безоплатну, невиключну ліцензію на:</p>
           <ol class="lic-list">
-            <li>Використання Програмного забезпечення в особистих, освітніх та некомерційних дослідницьких цілях.</li>
+            <li>Використання Програмного забезпечення в особистих, освітніх та некомерційних дослідницьких цілях без обмежень.</li>
+            <li>Використання Програмного забезпечення в будь-якому проєкті чи організації, річний валовий дохід яких не перевищує 100&nbsp;000 доларів США, за умови, що Програмне забезпечення не продається та не ліцензується безпосередньо як окремий продукт чи послуга.</li>
             <li>Копіювання та розповсюдження дослівних копій Програмного забезпечення та даної ліцензії.</li>
             <li>Вивчення та перевірку вихідного коду в будь-яких цілях.</li>
             <li>Зміну Програмного забезпечення та розповсюдження Похідних робіт за умови дотримання всіх умов даної ліцензії.</li>
-            <li>Внесення змін назад до оригінального проекту.</li>
+            <li>Внесення змін назад до оригінального проєкту на умовах, погоджених з правовласниками.</li>
           </ol>
         </div>
       </section>
@@ -390,27 +448,32 @@
               <ul>
                 <li>Retain this license file in full.</li>
                 <li>Retain the original copyright notice.</li>
-                <li>Include a visible attribution in any documentation or "About" section:<br>
+                <li>Include a visible attribution in any user-facing documentation, product "About" section, or README:<br>
                 <em>"Based on software by Serhii Merenkov / Technologies LLC (own-net.com)"</em></li>
               </ul>
             </li>
             <li>
-              <strong>Open Internet Compatibility</strong>
-              <p>You may <strong>NOT</strong> use the Software, in whole or in part, as a component of a Closed System as defined above. This restriction applies regardless of whether the Closed System is commercial or non-commercial, open-source or proprietary.</p>
-              <p>If you are uncertain whether your use qualifies, contact the authors at <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> before proceeding.</p>
+              <strong>Commercial Use Requires a License</strong>
+              <p>Any Commercial Use as defined above requires prior written permission from the copyright holders in the form of a separate Commercial License Agreement.</p>
+              <p>To obtain a Commercial License, contact: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+              <p>The copyright holders reserve the right to grant or decline Commercial Licenses at their sole discretion, and to set terms including but not limited to fees, attribution requirements, and field-of-use restrictions.</p>
+              <p>Using the Software in Commercial Use without a valid Commercial License Agreement is a material breach of this license and an infringement of copyright.</p>
             </li>
             <li>
-              <strong>Commercial Use</strong>
-              <p>Commercial use — including incorporation into products sold, licensed, or offered as a paid service — requires prior written permission from the copyright holders.</p>
-              <p>Contact: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+              <strong>No Closed Systems</strong>
+              <p>You may <strong>NOT</strong> use the Software, in whole or in part, as a component of a Closed System as defined above. This restriction applies regardless of whether the Closed System is commercial or non-commercial.</p>
+              <p>This condition applies equally to all licensees, including those holding a Commercial License, unless the Commercial License Agreement explicitly waives this condition in writing.</p>
             </li>
             <li>
-              <strong>ShareAlike</strong>
-              <p>Any Derivative Work distributed to third parties must be released under this license (OwnNet Source License 1.0) or a later version thereof. You may not apply additional restrictions that limit recipients' rights beyond what this license already allows.</p>
+              <strong>ShareAlike for Derivative Works</strong>
+              <p>Any Derivative Work distributed to third parties must be released under this license (OwnNet Source License 1.0) or a later version thereof.</p>
+              <p>Each author of a Derivative Work retains copyright over their own contributions. Use of any author's contributions in a Commercial context requires that author's separate written permission, regardless of any permission granted by the original copyright holders.</p>
+              <p>You may not apply additional restrictions that limit recipients' rights beyond what this license already allows.</p>
             </li>
             <li>
               <strong>No Misrepresentation</strong>
               <p>You may not use the name "OwnNet", the OwnNet project name, or the names of the copyright holders to endorse or promote Derivative Works without prior written consent.</p>
+              <p>You may not represent the Software or any Derivative Work as being licensed under an OSI-approved Open Source license.</p>
             </li>
           </ol>
         </div>
@@ -423,27 +486,32 @@
               <ul>
                 <li>Сохранять данный файл лицензии в полном объёме.</li>
                 <li>Сохранять оригинальное уведомление об авторских правах.</li>
-                <li>Включать видимую атрибуцию в любую документацию или раздел «О программе»:<br>
+                <li>Включать видимую атрибуцию в любую пользовательскую документацию, раздел продукта «О программе» или README:<br>
                 <em>«Основано на программном обеспечении Serhii Merenkov / Technologies LLC (own-net.com)»</em></li>
               </ul>
             </li>
             <li>
-              <strong>Совместимость с открытым интернетом</strong>
-              <p>Вы <strong>НЕ МОЖЕТЕ</strong> использовать Программное обеспечение, полностью или частично, как компонент Замкнутой системы, как определено выше. Это ограничение применяется независимо от того, является ли Замкнутая система коммерческой или некоммерческой, с открытым или закрытым исходным кодом.</p>
-              <p>Если вы не уверены, соответствует ли ваше использование условиям лицензии, свяжитесь с авторами по адресу <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> до начала использования.</p>
+              <strong>Коммерческое использование требует лицензии</strong>
+              <p>Любое Коммерческое использование, как определено выше, требует предварительного письменного разрешения правообладателей в форме отдельного Соглашения о коммерческой лицензии (Commercial License Agreement).</p>
+              <p>Для получения коммерческой лицензии обращайтесь: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+              <p>Правообладатели оставляют за собой право по своему усмотрению предоставлять или отказывать в коммерческих лицензиях, а также устанавливать условия, включая, помимо прочего, размер вознаграждения, требования к атрибуции и ограничения по сфере использования.</p>
+              <p>Использование Программного обеспечения в Коммерческих целях без действительного Соглашения о коммерческой лицензии является существенным нарушением данной лицензии и нарушением авторских прав.</p>
             </li>
             <li>
-              <strong>Коммерческое использование</strong>
-              <p>Коммерческое использование — включая включение в продукты, продаваемые, лицензируемые или предлагаемые в качестве платного сервиса — требует предварительного письменного разрешения правообладателей.</p>
-              <p>Контакт: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+              <strong>Запрет замкнутых систем</strong>
+              <p>Вы <strong>НЕ МОЖЕТЕ</strong> использовать Программное обеспечение, полностью или частично, как компонент Замкнутой системы, как определено выше. Это ограничение применяется независимо от того, является ли Замкнутая система коммерческой или некоммерческой.</p>
+              <p>Данное условие применяется ко всем лицензиатам в равной мере, включая обладателей коммерческой лицензии, если иное прямо не предусмотрено письменно в Соглашении о коммерческой лицензии.</p>
             </li>
             <li>
-              <strong>ShareAlike (на тех же условиях)</strong>
-              <p>Любая Производная работа, распространяемая третьим лицам, должна выпускаться под данной лицензией (OwnNet Source License 1.0) или её более поздней версией. Вы не можете накладывать дополнительные ограничения, которые ограничивают права получателей сверх того, что уже разрешено данной лицензией.</p>
+              <strong>ShareAlike для производных работ</strong>
+              <p>Любая Производная работа, распространяемая третьим лицам, должна выпускаться под данной лицензией (OwnNet Source License 1.0) или её более поздней версией.</p>
+              <p>Каждый автор Производной работы сохраняет авторские права на собственный вклад. Использование вклада любого автора в коммерческом контексте требует отдельного письменного разрешения этого автора, независимо от разрешений, данных первоначальными правообладателями.</p>
+              <p>Вы не можете накладывать дополнительные ограничения, которые ограничивают права получателей сверх того, что уже разрешено данной лицензией.</p>
             </li>
             <li>
               <strong>Запрет на ложное представление</strong>
               <p>Вы не можете использовать название «OwnNet», название проекта OwnNet или имена правообладателей для поддержки или продвижения Производных работ без предварительного письменного согласия.</p>
+              <p>Вы не можете представлять Программное обеспечение или любую Производную работу как распространяемые под лицензией Open Source, одобренной OSI.</p>
             </li>
           </ol>
         </div>
@@ -456,29 +524,72 @@
               <ul>
                 <li>Зберігати даний файл ліцензії повністю.</li>
                 <li>Зберігати оригінальне повідомлення про авторські права.</li>
-                <li>Включати видиму атрибуцію в будь-яку документацію або розділ «Про програму»:<br>
+                <li>Включати видиму атрибуцію в будь-яку документацію для користувачів, розділ продукту «Про програму» або README:<br>
                 <em>«Засновано на програмному забезпеченні Serhii Merenkov / Technologies LLC (own-net.com)»</em></li>
               </ul>
             </li>
             <li>
-              <strong>Сумісність з відкритим інтернетом</strong>
-              <p>Ви <strong>НЕ МОЖЕТЕ</strong> використовувати Програмне забезпечення, повністю або частково, як компонент Замкненої системи, як визначено вище. Це обмеження застосовується незалежно від того, чи є Замкнена система комерційною або некомерційною, з відкритим або закритим вихідним кодом.</p>
-              <p>Якщо ви не впевнені, чи відповідає ваше використання умовам ліцензії, зв'яжіться з авторами за адресою <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> до початку використання.</p>
+              <strong>Комерційне використання вимагає ліцензії</strong>
+              <p>Будь-яке Комерційне використання, як визначено вище, вимагає попереднього письмового дозволу правовласників у формі окремої Угоди про комерційну ліцензію (Commercial License Agreement).</p>
+              <p>Щоб отримати комерційну ліцензію, звертайтеся: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+              <p>Правовласники залишають за собою право на власний розсуд надавати або відмовляти в комерційних ліцензіях, а також встановлювати умови, включно з, але не обмежуючись, розміром винагороди, вимогами до атрибуції та обмеженнями сфери використання.</p>
+              <p>Використання Програмного забезпечення в Комерційних цілях без чинної Угоди про комерційну ліцензію є істотним порушенням даної ліцензії та порушенням авторських прав.</p>
             </li>
             <li>
-              <strong>Комерційне використання</strong>
-              <p>Комерційне використання — включаючи включення до продуктів, що продаються, ліцензуються або пропонуються як платний сервіс — вимагає попереднього письмового дозволу правовласників.</p>
-              <p>Контакт: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a></p>
+              <strong>Заборона замкнених систем</strong>
+              <p>Ви <strong>НЕ МОЖЕТЕ</strong> використовувати Програмне забезпечення, повністю або частково, як компонент Замкненої системи, як визначено вище. Це обмеження застосовується незалежно від того, чи є Замкнена система комерційною або некомерційною.</p>
+              <p>Ця умова застосовується до всіх ліцензіатів на рівних підставах, включно з тими, хто має комерційну ліцензію, якщо інше прямо не передбачено письмово в Угоді про комерційну ліцензію.</p>
             </li>
             <li>
-              <strong>ShareAlike (на тих самих умовах)</strong>
-              <p>Будь-яка Похідна робота, що розповсюджується третім особам, повинна випускатися під даною ліцензією (OwnNet Source License 1.0) або її пізнішою версією. Ви не можете накладати додаткові обмеження, що обмежують права отримувачів понад те, що вже дозволено даною ліцензією.</p>
+              <strong>ShareAlike для похідних робіт</strong>
+              <p>Будь-яка Похідна робота, що розповсюджується третім особам, повинна випускатися під даною ліцензією (OwnNet Source License 1.0) або її пізнішою версією.</p>
+              <p>Кожен автор Похідної роботи зберігає авторські права на власний внесок. Використання внеску будь-якого автора в комерційному контексті вимагає окремого письмового дозволу цього автора, незалежно від дозволів, наданих первинними правовласниками.</p>
+              <p>Ви не можете накладати додаткові обмеження, що обмежують права отримувачів понад те, що вже дозволено даною ліцензією.</p>
             </li>
             <li>
               <strong>Заборона на неправдиве представлення</strong>
-              <p>Ви не можете використовувати назву «OwnNet», назву проекту OwnNet або імена правовласників для підтримки або просування Похідних робіт без попередньої письменої згоди.</p>
+              <p>Ви не можете використовувати назву «OwnNet», назву проекту OwnNet або імена правовласників для підтримки або просування Похідних робіт без попередньої письменної згоди.</p>
+              <p>Ви не можете представляти Програмне забезпечення або будь-яку Похідну роботу як такі, що ліцензовані за ліцензією Open Source, схваленою OSI.</p>
             </li>
           </ol>
+        </div>
+      </section>
+
+      <!-- ── COMMERCIAL LICENSE ── -->
+      <section class="lic-section" id="commercial-license">
+        <h2 data-i18n="licCommercialTitle">Commercial License</h2>
+
+        <div data-for-lang="en">
+          <p>Organizations or individuals who require Commercial Use may contact the copyright holders to obtain a Commercial License Agreement. Commercial licenses may include:</p>
+          <ul class="lic-bullet-list">
+            <li>Permission for revenue-generating products and services</li>
+            <li>Custom attribution requirements</li>
+            <li>SLA or support terms</li>
+            <li>Alternative governing law by mutual agreement</li>
+          </ul>
+          <p>Contact: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> | <a href="https://own-net.com/">https://own-net.com/</a></p>
+        </div>
+
+        <div data-for-lang="ru" hidden>
+          <p>Организации или лица, которым требуется Коммерческое использование, могут связаться с правообладателями для заключения Соглашения о коммерческой лицензии. Коммерческие лицензии могут включать:</p>
+          <ul class="lic-bullet-list">
+            <li>Разрешение на продукты и услуги, приносящие доход</li>
+            <li>Индивидуальные требования к атрибуции</li>
+            <li>Условия SLA или поддержки</li>
+            <li>Иной применимый закон по взаимному согласию</li>
+          </ul>
+          <p>Контакт: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> | <a href="https://own-net.com/">https://own-net.com/</a></p>
+        </div>
+
+        <div data-for-lang="uk" hidden>
+          <p>Організації або особи, яким потрібне Комерційне використання, можуть зв'язатися з правовласниками для укладення Угоди про комерційну ліцензію. Комерційні ліцензії можуть включати:</p>
+          <ul class="lic-bullet-list">
+            <li>Дозвіл на продукти та послуги, що генерують дохід</li>
+            <li>Індивідуальні вимоги до атрибуції</li>
+            <li>Умови SLA або підтримки</li>
+            <li>Альтернативне застосовне право за взаємною згодою</li>
+          </ul>
+          <p>Контакт: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> | <a href="https://own-net.com/">https://own-net.com/</a></p>
         </div>
       </section>
 
@@ -504,15 +615,15 @@
         <h2 data-i18n="licGovTitle">Governing Law</h2>
 
         <div data-for-lang="en">
-          <p>This license is governed by the laws of Ukraine. Any disputes arising from or related to this license shall be subject to the jurisdiction of the courts of Ukraine.</p>
+          <p>This license is governed by the laws of Ukraine. Commercial licensees may negotiate an alternative governing jurisdiction as part of their Commercial License Agreement.</p>
         </div>
 
         <div data-for-lang="ru" hidden>
-          <p>Данная лицензия регулируется законодательством Украины. Любые споры, возникающие в связи с данной лицензией или связанные с ней, подлежат рассмотрению судами Украины.</p>
+          <p>Данная лицензия регулируется законодательством Украины. Держатели коммерческой лицензии могут согласовать иную применимую юрисдикцию в рамках своего Соглашения о коммерческой лицензии.</p>
         </div>
 
         <div data-for-lang="uk" hidden>
-          <p>Дана ліцензія регулюється законодавством України. Будь-які суперечки, що виникають у зв'язку з даною ліцензією або пов'язані з нею, підлягають розгляду судами України.</p>
+          <p>Дана ліцензія регулюється законодавством України. Тримувачі комерційної ліцензії можуть узгодити альтерсативну юрисдикцію в рамках своєї Угоди про комерційну ліцензію.</p>
         </div>
       </section>
 
@@ -536,36 +647,48 @@
 
     var t = {
       en: {
-        licPageTitle: 'OwnNet Source License 1.0',
+        licPageTitle: 'OwnNet Source License 1.0 (Source Available)',
+        licMainTitle: 'OwnNet Source License 1.0',
+        licEdition: '(Source Available Edition)',
         licVersion: 'Version 1.0, May 2026',
+        licNoticeTitle: 'Notice',
         licPreambleTitle: 'Preamble',
         licDefsTitle: 'Definitions',
         licGrantTitle: 'Grant of Rights',
         licCondTitle: 'Conditions',
+        licCommercialTitle: 'Commercial License',
         licDisclTitle: 'Disclaimer of Warranties',
         licGovTitle: 'Governing Law',
         licBackLink: '← Back to manifesto',
         licEnd: 'END OF OwnNet SOURCE LICENSE VERSION 1.0'
       },
       ru: {
-        licPageTitle: 'OwnNet Source License 1.0 — лицензия',
+        licPageTitle: 'OwnNet Source License 1.0 (Source Available)',
+        licMainTitle: 'OwnNet Source License 1.0',
+        licEdition: '(издание Source Available)',
         licVersion: 'Версия 1.0, Май 2026',
+        licNoticeTitle: 'Уведомление',
         licPreambleTitle: 'Преамбула',
         licDefsTitle: 'Определения',
         licGrantTitle: 'Предоставление прав',
         licCondTitle: 'Условия',
+        licCommercialTitle: 'Коммерческая лицензия',
         licDisclTitle: 'Отказ от гарантий',
         licGovTitle: 'Применимое право',
         licBackLink: '← Назад к манифесту',
         licEnd: 'КОНЕЦ OwnNet SOURCE LICENSE ВЕРСИИ 1.0'
       },
       uk: {
-        licPageTitle: 'OwnNet Source License 1.0 — ліцензія',
+        licPageTitle: 'OwnNet Source License 1.0 (Source Available)',
+        licMainTitle: 'OwnNet Source License 1.0',
+        licEdition: '(видання Source Available)',
         licVersion: 'Версія 1.0, Травень 2026',
+        licNoticeTitle: 'Повідомлення',
         licPreambleTitle: 'Преамбула',
         licDefsTitle: 'Визначення',
         licGrantTitle: 'Надання прав',
         licCondTitle: 'Умови',
+        licCommercialTitle: 'Комерційна ліцензія',
         licDisclTitle: 'Відмова від гарантій',
         licGovTitle: 'Застосовне право',
         licBackLink: '← Назад до маніфесту',
