@@ -1,4 +1,11 @@
 {
   "cleanUrls": false,
-  "directoryListing": false
+  "directoryListing": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/ru", "destination": "/ru/index.html" },
+    { "source": "/ru/", "destination": "/ru/index.html" },
+    { "source": "/uk", "destination": "/uk/index.html" },
+    { "source": "/uk/", "destination": "/uk/index.html" }
+  ]
 }
