@@ -6,6 +6,9 @@
 
   var t = {
     en: {
+      pageTitle: 'OwnNet — Internet 4.0 | Open internet for everyone',
+      metaDescription: 'Manifesto of the Open Internet 4.0. Digital ownership, interoperability, protocols over platforms.',
+      shareText: 'Manifesto of the Open Internet 4.0 — OwnNet',
       heroTitle: 'Open internet for everyone',
       heroLead: 'A movement for digital ownership, protocols over platforms, and sovereignty over your data and devices.',
       introHTML: 'This is not a startup or a token. It is <strong>a movement and a technical doctrine</strong>: a manifesto, architectural principles, and public use cases for those who want an internet without remote kill switches and walled ecosystems.',
@@ -30,28 +33,33 @@
       m9Body: 'The internet should be built on open protocols, not corporate walled gardens.',
       m10Title: 'Digital Sovereignty Is Civil Sovereignty.',
       m10Body: 'Control over digital infrastructure equals political autonomy.',
+      manifestoLicenseHTML: 'The text of this manifesto is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a> — copy, translate, quote and republish it freely, with attribution to own-net.com.',
       nextTitle: 'In practice',
       next1: 'Open architectural principles and reference implementations.',
       next2: 'Practical knowledge: devices without remote kill switches, offline-first design, rights in the EU and US.',
       next3: 'Doctrine and practice over DAO and tokens.',
+      projectsHTML: 'Projects: <a href="https://github.com/merenkoff/tiktok-live">The Live Shop</a> — TikTok LIVE sales automation and an offline-first point of sale for small sellers, source-available under the OwnNet Source License. <a href="https://github.com/merenkoff/internet4">This website</a> is open too.',
       nextNote: 'If these principles resonate with you — share the manifesto and be part of the movement.',
       shareLabel: 'Share',
       copyLink: 'Copy link',
       copyDone: 'Copied!',
-      licenseTitle: 'OwnNet Source License 1.0',
+      licenseTitle: 'OwnNet Source License 1.1',
       licenseLead: 'Our software is open — but not unconditional. The license is a direct extension of the manifesto: source code is available for study, improvement, and sharing, but may not be used to build systems that contradict what we stand for.',
       licenseAllowedTitle: 'Permitted',
       licAllow1: 'Study, fork, and contribute to the code',
-      licAllow2: 'Personal and educational use',
+      licAllow2: 'Any non-commercial use, and use in a business with under USD $100,000 annual revenue',
       licAllow3: 'Derivative works — under the same license (ShareAlike)',
       licenseDeniedTitle: 'Prohibited',
       licDeny1: 'Use in Closed Systems: remote kill switches, forced lock-in, blocked modification',
       licDeny2: 'Surveillance or data collection without explicit user consent',
-      licDeny3: 'Commercial use without prior written permission',
-      licenseNoteHTML: 'Full license text is included as a <code>LICENSE</code> file in every repository. © 2026 Serhii Merenkov / Technologies LLC.',
+      licDeny3: 'Commercial Use without a written agreement: revenue above USD $100,000, paid SaaS, or selling the software itself',
+      licenseNoteHTML: 'Every repository ships the full text as a <code>LICENSE</code> file with its own parameters block (project name, attribution line). Contributions are accepted under Section 6 of the license. © 2026 Serhii Merenkov / Technologies LLC.',
       licReadFull: 'Read the full license →'
     },
     ru: {
+      pageTitle: 'OwnNet — Internet 4.0 | Открытый интернет для всех',
+      metaDescription: 'Манифест открытого интернета 4.0. Цифровая собственность, совместимость, протоколы вместо платформ.',
+      shareText: 'Манифест открытого интернета 4.0 — OwnNet',
       heroTitle: 'Открытый интернет для всех',
       heroLead: 'Движение за цифровую собственность, протоколы вместо платформ и суверенитет над своими данными и устройствами.',
       introHTML: 'Это не стартап и не токен. Это <strong>движение и техническая доктрина</strong>: манифест, архитектурные принципы и публичные кейсы для тех, кто хочет интернет без удалённого отключения и замкнутых экосистем.',
@@ -76,28 +84,33 @@
       m9Body: 'Интернет должен строиться на открытых протоколах, а не корпоративных стенах.',
       m10Title: 'Цифровой суверенитет — гражданский суверенитет.',
       m10Body: 'Контроль над цифровой инфраструктурой равен политической автономии.',
+      manifestoLicenseHTML: 'Текст манифеста распространяется по лицензии <a href="https://creativecommons.org/licenses/by/4.0/deed.ru" rel="license">CC BY 4.0</a> — копируйте, переводите, цитируйте и перепечатывайте свободно, с указанием источника own-net.com.',
       nextTitle: 'На практике',
       next1: 'Открытые архитектурные принципы и референсные реализации.',
       next2: 'Практические знания: устройства без удалённого отключения, offline-first, права в ЕС и США.',
       next3: 'Доктрина и практика вместо DAO и токенов.',
+      projectsHTML: 'Проекты: <a href="https://github.com/merenkoff/tiktok-live">The Live Shop</a> — автоматизация продаж в TikTok LIVE и offline-first касса для небольших продавцов; исходный код открыт под OwnNet Source License. <a href="https://github.com/merenkoff/internet4">Этот сайт</a> тоже открыт.',
       nextNote: 'Если эти принципы вам близки — распространяйте манифест и будьте частью движения.',
       shareLabel: 'Поделиться',
       copyLink: 'Скопировать ссылку',
       copyDone: 'Скопировано!',
-      licenseTitle: 'OwnNet Source License 1.0',
+      licenseTitle: 'OwnNet Source License 1.1',
       licenseLead: 'Наше ПО открыто — но не безусловно. Лицензия — прямое продолжение манифеста: исходный код доступен для изучения, улучшения и распространения, но его нельзя использовать для создания систем, противоречащих нашим ценностям.',
       licenseAllowedTitle: 'Разрешено',
       licAllow1: 'Изучать, форкать и вносить вклад в код',
-      licAllow2: 'Личное и образовательное использование',
+      licAllow2: 'Любое некоммерческое использование и использование в бизнесе с годовым доходом до 100 000 долларов США',
       licAllow3: 'Производные работы — на тех же условиях (ShareAlike)',
       licenseDeniedTitle: 'Запрещено',
       licDeny1: 'Использование в «замкнутых системах»: удалённое отключение, принудительный lock-in, запрет модификации',
       licDeny2: 'Слежка или сбор данных без явного согласия пользователя',
-      licDeny3: 'Коммерческое использование без письменного разрешения',
-      licenseNoteHTML: 'Полный текст лицензии включён как файл <code>LICENSE</code> в каждый репозиторий. © 2026 Serhii Merenkov / Technologies LLC.',
+      licDeny3: 'Коммерческое использование без письменного соглашения: доход выше 100 000 долларов США, платный SaaS или продажа самого ПО',
+      licenseNoteHTML: 'Полный текст включён как файл <code>LICENSE</code> в каждый репозиторий — со своим блоком параметров (название проекта, строка атрибуции). Вклады принимаются на условиях раздела 6 лицензии. © 2026 Serhii Merenkov / Technologies LLC.',
       licReadFull: 'Читать полный текст лицензии →'
     },
     uk: {
+      pageTitle: 'OwnNet — Internet 4.0 | Відкритий інтернет для всіх',
+      metaDescription: 'Маніфест відкритого інтернету 4.0. Цифрова власність, сумісність, протоколи замість платформ.',
+      shareText: 'Маніфест відкритого інтернету 4.0 — OwnNet',
       heroTitle: 'Відкритий інтернет для всіх',
       heroLead: 'Рух за цифрову власність, протоколи замість платформ і суверенітет над своїми даними та пристроями.',
       introHTML: 'Це не стартап і не токен. Це <strong>рух і технічна доктрина</strong>: маніфест, архітектурні принципи та публічні кейси для тих, хто хоче інтернет без віддалених вимкнень і замкнених екосистем.',
@@ -122,40 +135,59 @@
       m9Body: 'Інтернет має будуватися на відкритих протоколах, а не корпоративних стінах.',
       m10Title: 'Цифровий суверенітет — громадянський суверенітет.',
       m10Body: 'Контроль над цифровою інфраструктурою дорівнює політичній автономії.',
+      manifestoLicenseHTML: 'Текст маніфесту поширюється за ліцензією <a href="https://creativecommons.org/licenses/by/4.0/deed.uk" rel="license">CC BY 4.0</a> — копіюйте, перекладайте, цитуйте та передруковуйте вільно, із зазначенням джерела own-net.com.',
       nextTitle: 'На практиці',
       next1: 'Відкриті архітектурні принципи та референсні реалізації.',
       next2: 'Практичні знання: пристрої без віддаленого вимкнення, offline-first, права в ЄС та США.',
       next3: 'Доктрина й практика замість DAO та токенів.',
+      projectsHTML: 'Проєкти: <a href="https://github.com/merenkoff/tiktok-live">The Live Shop</a> — автоматизація продажів у TikTok LIVE та offline-first каса для невеликих продавців; вихідний код відкритий під OwnNet Source License. <a href="https://github.com/merenkoff/internet4">Цей сайт</a> теж відкритий.',
       nextNote: 'Якщо ці принципи вам близькі — поширюйте маніфест і будьте частиною руху.',
       shareLabel: 'Поширити',
       copyLink: 'Скопіювати посилання',
       copyDone: 'Скопійовано!',
-      licenseTitle: 'OwnNet Source License 1.0',
+      licenseTitle: 'OwnNet Source License 1.1',
       licenseLead: 'Наше ПЗ відкрите — але не безумовно. Ліцензія — пряме продовження маніфесту: вихідний код доступний для вивчення, покращення та поширення, але його не можна використовувати для створення систем, що суперечать нашим цінностям.',
       licenseAllowedTitle: 'Дозволено',
       licAllow1: 'Вивчати, форкати та робити внески до коду',
-      licAllow2: 'Особисте та освітнє використання',
+      licAllow2: 'Будь-яке некомерційне використання та використання в бізнесі з річним доходом до 100 000 доларів США',
       licAllow3: 'Похідні роботи — на тих самих умовах (ShareAlike)',
       licenseDeniedTitle: 'Заборонено',
       licDeny1: 'Використання в «замкнених системах»: віддалені вимикачі, примусовий lock-in, заборона модифікації',
       licDeny2: 'Стеження або збір даних без явної згоди користувача',
-      licDeny3: 'Комерційне використання без письмового дозволу',
-      licenseNoteHTML: 'Повний текст ліцензії включено як файл <code>LICENSE</code> у кожен репозиторій. © 2026 Serhii Merenkov / Technologies LLC.',
+      licDeny3: 'Комерційне використання без письмової угоди: дохід понад 100 000 доларів США, платний SaaS або продаж самого ПЗ',
+      licenseNoteHTML: 'Повний текст включено як файл <code>LICENSE</code> у кожен репозиторій — із власним блоком параметрів (назва проєкту, рядок атрибуції). Внески приймаються на умовах розділу 6 ліцензії. © 2026 Serhii Merenkov / Technologies LLC.',
       licReadFull: 'Читати повний текст ліцензії →'
     }
   };
 
-  function getPreferredLang() {
-    var saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && supported[saved]) return saved;
-    var browser = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
-    if (browser === 'uk' || browser === 'ru') return browser;
-    return 'en';
+  // Each language lives at its own URL (/, /ru/, /uk/) so that search engines
+  // see the translations. The page language is therefore taken from the URL;
+  // the stored choice is only used to redirect first-time visitors of the
+  // English URLs.
+  function storedLang() {
+    try {
+      var v = localStorage.getItem(STORAGE_KEY);
+      return supported[v] ? v : null;
+    } catch (e) { return null; }
+  }
+
+  function storeLang(lang) {
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
+  function browserLang() {
+    var b = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+    return supported[b] ? b : 'en';
+  }
+
+  function pathLang() {
+    var m = window.location.pathname.match(/^\/(ru|uk)(\/|$)/);
+    return m ? m[1] : 'en';
   }
 
   function applyLang(lang) {
     if (!supported[lang]) lang = 'en';
-    document.documentElement.lang = lang === 'uk' ? 'uk' : lang === 'ru' ? 'ru' : 'en';
+    document.documentElement.lang = lang;
     var strings = t[lang];
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
@@ -169,27 +201,38 @@
       if (value !== undefined) el.innerHTML = value;
     });
 
+    if (strings.pageTitle) document.title = strings.pageTitle;
+
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
       var isActive = btn.getAttribute('data-lang') === lang;
       btn.classList.toggle('active', isActive);
-      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      if (isActive) btn.setAttribute('aria-current', 'page');
+      else btn.removeAttribute('aria-current');
     });
-
-    localStorage.setItem(STORAGE_KEY, lang);
   }
 
-  var lang = getPreferredLang();
+  var lang = pathLang();
   applyLang(lang);
 
+  // Remember an explicit choice; the link itself does the navigation.
   document.querySelectorAll('.lang-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      applyLang(btn.getAttribute('data-lang'));
+      storeLang(btn.getAttribute('data-lang'));
     });
   });
 
+  // On an English URL, follow the remembered choice or the browser language.
+  if (lang === 'en' && /^https?:$/.test(window.location.protocol)) {
+    var want = storedLang() || browserLang();
+    if (want !== 'en') {
+      window.location.replace('/' + want + window.location.pathname + window.location.search + window.location.hash);
+      return;
+    }
+  }
+
   function setupShare() {
     var url = encodeURIComponent(window.location.href);
-    var text = encodeURIComponent('Manifesto of the Open Internet 4.0 — OwnNet');
+    var text = encodeURIComponent(t[lang].shareText);
     var urls = {
       x: 'https://twitter.com/intent/tweet?url=' + url + '&text=' + text,
       facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + url,
@@ -203,13 +246,11 @@
     var copyBtn = document.querySelector('.share-copy');
     if (copyBtn) {
       copyBtn.addEventListener('click', function () {
+        if (!navigator.clipboard) return;
         navigator.clipboard.writeText(window.location.href).then(function () {
-          var lang = getPreferredLang();
-          var done = t[lang] && t[lang].copyDone ? t[lang].copyDone : 'Copied!';
-          copyBtn.textContent = done;
+          copyBtn.textContent = t[lang].copyDone;
           setTimeout(function () {
-            var current = getPreferredLang();
-            copyBtn.textContent = t[current] && t[current].copyLink ? t[current].copyLink : 'Copy link';
+            copyBtn.textContent = t[lang].copyLink;
           }, 1500);
         });
       });

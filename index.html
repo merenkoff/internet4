@@ -5,7 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OwnNet — Internet 4.0 | Open internet for everyone</title>
   <meta name="description" content="Manifesto of the Open Internet 4.0. Digital ownership, interoperability, protocols over platforms.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://own-net.com/">
+  <link rel="alternate" hreflang="en" href="https://own-net.com/">
+  <link rel="alternate" hreflang="ru" href="https://own-net.com/ru/">
+  <link rel="alternate" hreflang="uk" href="https://own-net.com/uk/">
+  <link rel="alternate" hreflang="x-default" href="https://own-net.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OwnNet — Internet 4.0">
+  <meta property="og:url" content="https://own-net.com/">
+  <meta property="og:title" content="OwnNet — Internet 4.0 | Open internet for everyone">
+  <meta property="og:description" content="Manifesto of the Open Internet 4.0. Digital ownership, interoperability, protocols over platforms.">
+  <meta property="og:image" content="https://own-net.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="OwnNet — Internet 4.0 | Open internet for everyone">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OwnNet — Internet 4.0 | Open internet for everyone">
+  <meta name="twitter:description" content="Manifesto of the Open Internet 4.0. Digital ownership, interoperability, protocols over platforms.">
+  <meta name="twitter:image" content="https://own-net.com/og-image.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header class="header">
@@ -13,9 +37,9 @@
       <a href="/" class="logo">OwnNet</a>
       <span class="tagline">Internet 4.0</span>
       <nav class="lang-switch" aria-label="Language">
-        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
-        <button type="button" class="lang-btn" data-lang="uk" aria-pressed="false">UA</button>
+        <a class="lang-btn active" href="/" data-lang="en" hreflang="en" aria-current="page">EN</a>
+        <a class="lang-btn" href="/ru/" data-lang="ru" hreflang="ru">RU</a>
+        <a class="lang-btn" href="/uk/" data-lang="uk" hreflang="uk">UA</a>
       </nav>
     </div>
   </header>
@@ -47,19 +71,20 @@
           <li><strong data-i18n="m9Title">Protocols Over Platforms.</strong> <span data-i18n="m9Body">The internet should be built on open protocols, not corporate walled gardens.</span></li>
           <li><strong data-i18n="m10Title">Digital Sovereignty Is Civil Sovereignty.</strong> <span data-i18n="m10Body">Control over digital infrastructure equals political autonomy.</span></li>
         </ol>
+        <p class="manifesto-license" data-i18n-html="manifestoLicenseHTML">The text of this manifesto is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a> — copy, translate, quote and republish it freely, with attribution to own-net.com.</p>
       </div>
     </section>
 
     <section class="license" id="license">
       <div class="wrap">
-        <h2 data-i18n="licenseTitle">OwnNet Source License 1.0</h2>
+        <h2 data-i18n="licenseTitle">OwnNet Source License 1.1</h2>
         <p class="license-lead" data-i18n="licenseLead">Our software is open — but not unconditional. The license is a direct extension of the manifesto: source code is available for study, improvement, and sharing, but may not be used to build systems that contradict what we stand for.</p>
         <div class="license-cols">
           <div>
             <p class="license-col-title" data-i18n="licenseAllowedTitle">Permitted</p>
             <ul class="license-list license-allow">
               <li data-i18n="licAllow1">Study, fork, and contribute to the code</li>
-              <li data-i18n="licAllow2">Personal and educational use</li>
+              <li data-i18n="licAllow2">Any non-commercial use, and use in a business with under USD $100,000 annual revenue</li>
               <li data-i18n="licAllow3">Derivative works — under the same license (ShareAlike)</li>
             </ul>
           </div>
@@ -68,12 +93,12 @@
             <ul class="license-list license-deny">
               <li data-i18n="licDeny1">Use in Closed Systems: remote kill switches, forced lock-in, blocked modification</li>
               <li data-i18n="licDeny2">Surveillance or data collection without explicit user consent</li>
-              <li data-i18n="licDeny3">Commercial use without prior written permission</li>
+              <li data-i18n="licDeny3">Commercial Use without a written agreement: revenue above USD $100,000, paid SaaS, or selling the software itself</li>
             </ul>
           </div>
         </div>
-        <p class="license-note" data-i18n-html="licenseNoteHTML">Full license text is included as a <code>LICENSE</code> file in every repository. © 2026 Serhii Merenkov / Technologies LLC.</p>
-        <p class="license-read"><a href="license.html" data-i18n="licReadFull">Read the full license →</a></p>
+        <p class="license-note" data-i18n-html="licenseNoteHTML">Every repository ships the full text as a <code>LICENSE</code> file with its own parameters block (project name, attribution line). Contributions are accepted under Section 6 of the license. © 2026 Serhii Merenkov / Technologies LLC.</p>
+        <p class="license-read"><a href="/license.html" data-i18n="licReadFull">Read the full license →</a></p>
       </div>
     </section>
 
@@ -84,6 +109,7 @@
         <li data-i18n="next2">Practical knowledge: devices without remote kill switches, offline-first design, rights in the EU and US.</li>
         <li data-i18n="next3">Doctrine and practice over DAO and tokens.</li>
       </ul>
+      <p class="next-projects" data-i18n-html="projectsHTML">Projects: <a href="https://github.com/merenkoff/tiktok-live">The Live Shop</a> — TikTok LIVE sales automation and an offline-first point of sale for small sellers, source-available under the OwnNet Source License. <a href="https://github.com/merenkoff/internet4">This website</a> is open too.</p>
       <p class="next-note" data-i18n="nextNote">If these principles resonate with you — share the manifesto and be part of the movement.</p>
       <div class="share">
         <span class="share-label" data-i18n="shareLabel">Share</span>
@@ -104,6 +130,6 @@
     </div>
   </footer>
 
-  <script src="i18n.js"></script>
+  <script src="/i18n.js"></script>
 </body>
 </html>

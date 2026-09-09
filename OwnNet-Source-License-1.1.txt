@@ -3,18 +3,17 @@ OwnNet Source License 1.1
 Version 1.1, August 2026
 
 ═══════════════════════════════════════════════════════════════════════════
-LICENSE PARAMETERS  (this distribution)
+LICENSE PARAMETERS  (fill in for your project)
 ═══════════════════════════════════════════════════════════════════════════
 
-  Project Name .......... OwnNet — Internet 4.0 website (own-net.com)
-  Licensor .............. Serhii Merenkov / LIMITED LIABILITY COMPANY "Technologies"
-  Copyright ............. Copyright (c) 2026 Serhii Merenkov /
-                          LIMITED LIABILITY COMPANY "Technologies"
-  Licensor Contact ...... mer.sergei@gmail.com
-  Project Website ....... https://own-net.com/
+  Project Name .......... <project name>
+  Licensor .............. <copyright holder(s)>
+  Copyright ............. Copyright (c) <year> <copyright holder(s)>
+  Licensor Contact ...... <e-mail>
+  Project Website ....... <URL>
   Revenue Threshold ..... USD $100,000
-  Attribution Line ...... "Based on OwnNet by Serhii Merenkov /
-                          Technologies LLC (own-net.com)"
+  Attribution Line ...... "Based on <project name> by <copyright holder(s)>
+                          (<URL>)"
   Change Date ........... None (this License does not auto-convert)
 
 A reuser of this License fills in the parameters above for their own project.
