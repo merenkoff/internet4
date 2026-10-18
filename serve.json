@@ -6,6 +6,12 @@
     { "source": "/ru", "destination": "/ru/index.html" },
     { "source": "/ru/", "destination": "/ru/index.html" },
     { "source": "/uk", "destination": "/uk/index.html" },
-    { "source": "/uk/", "destination": "/uk/index.html" }
+    { "source": "/uk/", "destination": "/uk/index.html" },
+    { "source": "/cases/malin", "destination": "/cases/malin/index.html" },
+    { "source": "/cases/malin/", "destination": "/cases/malin/index.html" },
+    { "source": "/ru/cases/malin", "destination": "/ru/cases/malin/index.html" },
+    { "source": "/ru/cases/malin/", "destination": "/ru/cases/malin/index.html" },
+    { "source": "/uk/cases/malin", "destination": "/uk/cases/malin/index.html" },
+    { "source": "/uk/cases/malin/", "destination": "/uk/cases/malin/index.html" }
   ]
 }
