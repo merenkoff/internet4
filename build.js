@@ -65,9 +65,10 @@ function applyStrings(html, strings) {
       new RegExp('(<[a-z0-9]+\\b[^>]*\\bdata-i18n="' + key + '"[^>]*>)([^<]*)(<)', 'g'),
       (m, open, text, close) => open + escapeText(value) + close
     );
+    // data-i18n-html works on any element without nested tags of the same name (<p>, <td>, <li>, …).
     html = html.replace(
-      new RegExp('(<p\\b[^>]*\\bdata-i18n-html="' + key + '"[^>]*>)([\\s\\S]*?)(</p>)', 'g'),
-      (m, open, inner, close) => open + value + close
+      new RegExp('(<([a-z0-9]+)\\b[^>]*\\bdata-i18n-html="' + key + '"[^>]*>)([\\s\\S]*?)(</\\2>)', 'g'),
+      (m, open, tag, inner, close) => open + value + close
     );
   }
   return html;
@@ -113,7 +114,7 @@ function localize(html, lang, meta, pagePath) {
 
   // Page-internal links.
   html = replaceOnce(html, /href="\/" class="logo"/, 'href="/' + lang + '/" class="logo"', 'logo link');
-  html = html.replace(/href="\/" data-i18n="licBackLink"/, 'href="/' + lang + '/" data-i18n="licBackLink"');
+  html = html.replace(/href="\/" data-i18n="(licBackLink|caseBackLink)"/, 'href="/' + lang + '/" data-i18n="$1"');
   html = html.replace(/href="\/license\.html" data-i18n="licReadFull"/, 'href="/' + lang + '/license.html" data-i18n="licReadFull"');
 
   return html;
@@ -143,6 +144,23 @@ function buildLicense() {
   }
 }
 
+// Case pages: an English source page under cases/<name>/index.html with its own
+// translation table (like license.html); the translations land at
+// <lang>/cases/<name>/index.html.
+const CASES = ['malin'];
+
+function buildCase(name) {
+  const file = 'cases/' + name + '/index.html';
+  const source = read(file);
+  const t = extractStrings(source, file);
+  for (const lang of LANGS) {
+    let html = localize(source, lang, { title: t[lang].casePageTitle, description: t[lang].caseMetaDescription }, '/cases/' + name + '/');
+    html = applyStrings(html, t[lang]);
+    write(lang + '/' + file, html);
+  }
+}
+
 buildIndex();
 buildLicense();
-console.log('built ' + LANGS.map((l) => l + '/index.html, ' + l + '/license.html').join(', '));
+CASES.forEach(buildCase);
+console.log('built ' + LANGS.map((l) => l + '/index.html, ' + l + '/license.html' + CASES.map((c) => ', ' + l + '/cases/' + c + '/index.html').join('')).join(', '));

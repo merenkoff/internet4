@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кейс: malin.kiev.ua и десять принципов | OwnNet</title>
+  <meta name="description" content="Как сайт городского транспорта Малина (Украина) привели в соответствие с Манифестом открытого интернета 4.0: табло остановок без сети, открытые данные GTFS, открытые протоколы — и чего ещё нет.">
+  <link rel="canonical" href="https://own-net.com/ru/cases/malin/">
+  <link rel="alternate" hreflang="en" href="https://own-net.com/cases/malin/">
+  <link rel="alternate" hreflang="ru" href="https://own-net.com/ru/cases/malin/">
+  <link rel="alternate" hreflang="uk" href="https://own-net.com/uk/cases/malin/">
+  <link rel="alternate" hreflang="x-default" href="https://own-net.com/cases/malin/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="OwnNet — Internet 4.0">
+  <meta property="og:url" content="https://own-net.com/ru/cases/malin/">
+  <meta property="og:title" content="Кейс: malin.kiev.ua и десять принципов | OwnNet">
+  <meta property="og:description" content="Как сайт городского транспорта Малина (Украина) привели в соответствие с Манифестом открытого интернета 4.0: табло остановок без сети, открытые данные GTFS, открытые протоколы — и чего ещё нет.">
+  <meta property="og:image" content="https://own-net.com/og-image-ru.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Кейс: malin.kiev.ua и десять принципов | OwnNet">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Кейс: malin.kiev.ua и десять принципов | OwnNet">
+  <meta name="twitter:description" content="Как сайт городского транспорта Малина (Украина) привели в соответствие с Манифестом открытого интернета 4.0: табло остановок без сети, открытые данные GTFS, открытые протоколы — и чего ещё нет.">
+  <meta name="twitter:image" content="https://own-net.com/og-image-ru.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .case-nav {
+      padding: 1.75rem 0 0;
+    }
+
+    .case-nav a {
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .15s;
+    }
+
+    .case-nav a:hover {
+      color: var(--fg);
+    }
+
+    .case-header {
+      padding: 2rem 0 2rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .case-kicker {
+      margin: 0 0 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+    }
+
+    .case-header h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .case-lead {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .case-meta {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .case-section {
+      padding: 2rem 0 0.5rem;
+    }
+
+    .case-section h2 {
+      margin: 0 0 1rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .case-section p {
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+    }
+
+    .case-section p.case-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .case-doc a,
+    .case-section p a,
+    .case-table a,
+    .case-list a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,162,39,.5);
+    }
+
+    .case-doc a:hover,
+    .case-section p a:hover,
+    .case-table a:hover,
+    .case-list a:hover {
+      color: var(--accent);
+    }
+
+    .case-table-wrap {
+      overflow-x: auto;
+      margin: 0 0 1rem;
+    }
+
+    .case-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .case-table th,
+    .case-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 0.6rem 0.75rem 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .case-table th {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      opacity: 0.8;
+    }
+
+    .case-table td:first-child {
+      width: 32%;
+      color: var(--fg);
+      font-weight: 600;
+    }
+
+    .case-table td:nth-child(2) {
+      width: 14%;
+      white-space: nowrap;
+    }
+
+    .case-status {
+      display: inline-block;
+      padding: 0.1rem 0.5rem;
+      border-radius: 2px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,.2);
+      color: var(--muted);
+    }
+
+    .case-status--done {
+      color: #5aaa77;
+      border-color: rgba(90,170,119,.5);
+    }
+
+    .case-status--partly {
+      color: var(--accent);
+      border-color: rgba(201,162,39,.5);
+    }
+
+    .case-list {
+      margin: 0 0 1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .case-list li {
+      position: relative;
+      margin-bottom: 0.55rem;
+      padding-left: 1.25rem;
+      font-size: 0.92rem;
+    }
+
+    .case-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .case-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .case-two {
+        grid-template-columns: 1fr;
+      }
+
+      .case-table td:first-child,
+      .case-table td:nth-child(2) {
+        width: auto;
+      }
+
+      .case-table td:nth-child(2) {
+        white-space: normal;
+      }
+    }
+
+    .case-footer-note {
+      margin: 2rem 0 0;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <a href="/ru/" class="logo">OwnNet</a>
+      <span class="tagline">Internet 4.0</span>
+      <nav class="lang-switch" aria-label="Language">
+        <a class="lang-btn" href="/cases/malin/" data-lang="en" hreflang="en">EN</a>
+        <a class="lang-btn active" href="/ru/cases/malin/" data-lang="ru" aria-current="page" hreflang="ru">RU</a>
+        <a class="lang-btn" href="/uk/cases/malin/" data-lang="uk" hreflang="uk">UA</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-doc wrap">
+
+      <nav class="case-nav">
+        <a href="/ru/" data-i18n="caseBackLink">← Назад к манифесту</a>
+      </nav>
+
+      <header class="case-header">
+        <p class="case-kicker" data-i18n="caseKicker">Кейс</p>
+        <h1 data-i18n="caseTitle">malin.kiev.ua: сайт городского транспорта, сверенный с десятью принципами</h1>
+        <p class="case-lead" data-i18n="caseLead">Малин — город в Житомирской области Украины, к северо-западу от Киева. Его табло остановок и расписания автобусов живут на malin.kiev.ua. В октябре 2026 года мы сверили сайт с манифестом, принцип за принципом, и исправили то, что смогли. Эта страница говорит, что сделано, что сделано наполовину и чего мы решили не делать.</p>
+        <p class="case-meta" data-i18n-html="caseMetaHTML">Сайт: <a href="https://malin.kiev.ua/">malin.kiev.ua</a> · Код: <a href="https://github.com/drivling/kyiv-malyn-booking">github.com/drivling/kyiv-malyn-booking</a> · Лицензия кода и данных: <a href="/ru/license.html">OwnNet Source License 1.1</a> · Состояние на 19 октября 2026 года.</p>
+      </header>
+
+      <section class="case-section" id="why">
+        <h2 data-i18n="caseWhyTitle">С чего всё началось</h2>
+        <p data-i18n-html="caseWhyHTML">Рецензент этого манифеста указал на принцип 5: <em>каждая важная система должна корректно деградировать и работать без центральных серверов</em>. Если табло остановок malin.kiev.ua не открывается без сети, сильная фраза на этом сайте оборачивается против его автора. 15 октября 2026 года проверка была честной: ни service worker, ни манифеста приложения, расписание жило только в открытой вкладке. Четыре этапа работы спустя сайт другой — и эта страница последний этап: сказать ровно то, что верно сейчас.</p>
+      </section>
+
+      <section class="case-section" id="principles">
+        <h2 data-i18n="caseTableTitle">Десять принципов, честно</h2>
+        <p class="case-note" data-i18n-html="caseTableNoteHTML">Статусы: <strong>сделано</strong> — проверено на боевом сайте и имеет адрес, который можно открыть; <strong>частично</strong> — код есть, но известные границы остаются; <strong>не касается</strong> — принцип об аппаратуре.</p>
+        <div class="case-table-wrap">
+          <table class="case-table">
+            <thead>
+              <tr>
+                <th data-i18n="thPrinciple">Принцип</th>
+                <th data-i18n="thStatus">Статус</th>
+                <th data-i18n="thEvidence">На чём держится</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="p1Name">1. Цифровая собственность — настоящая собственность</td>
+                <td><span class="case-status case-status--partly" data-i18n="stPartly">частично</span></td>
+                <td data-i18n-html="p1HTML">Установленное приложение и сохранённое расписание работают, когда наш сервер лежит; всю базу можно забрать как <a href="https://malin.kiev.ua/transport/gtfs.zip">GTFS</a> или JSON. Но домен и хостинг пока наши — установленная копия, которая переживёт домен, ещё не построена.</td>
+              </tr>
+              <tr>
+                <td data-i18n="p2Name">2. Устройства должны работать без разрешения</td>
+                <td><span class="case-status" data-i18n="stNa">не касается</span></td>
+                <td data-i18n-html="p2HTML">Аппаратуры нет. Раздел транспорта не требует аккаунта и устанавливается из браузера без магазина приложений: собственный баннер Chrome на Android, карточка с тремя шагами на iPhone.</td>
+              </tr>
+              <tr>
+                <td data-i18n="p3Name">3. ПО — это инфраструктура</td>
+                <td><span class="case-status case-status--done" data-i18n="stDone">сделано</span></td>
+                <td data-i18n-html="p3HTML">Открытые стандарты насквозь: <a href="https://malin.kiev.ua/transport/gtfs.zip">GTFS Static</a> (валидатор MobilityData: 0 ошибок), <a href="https://malin.kiev.ua/openapi.yaml">OpenAPI 3.1</a> со <a href="https://malin.kiev.ua/support/api">страницей справки</a>, <a href="https://malin.kiev.ua/transport/changes.rss">RSS</a>, iCalendar для каждого маршрута (<a href="https://malin.kiev.ua/transport/route/2/calendar.ics">пример</a>), HTTP-кеш с ETag.</td>
+              </tr>
+              <tr>
+                <td data-i18n="p4Name">4. Данные принадлежат человеку</td>
+                <td><span class="case-status case-status--partly" data-i18n="stPartly">частично</span></td>
+                <td data-i18n-html="p4HTML">Расписание — да: GTFS и JSON под указанной лицензией, с <a href="https://malin.kiev.ua/transport/revisions">журналом ревизий</a> каждого изменения. Собственные данные человека (бронирования, профиль в боте) — экспорт и удаление пока записанный план, а не код.</td>
+              </tr>
+              <tr>
+                <td data-i18n="p5Name">5. Сначала офлайн</td>
+                <td><span class="case-status case-status--done" data-i18n="stDoneTransport">сделано для /transport</span></td>
+                <td data-i18n-html="p5HTML">Табло остановок, расписания маршрутов, схема и планировщик <a href="https://malin.kiev.ua/transport">/transport</a> открываются без сети и без бэкенда после первого посещения; то, что человек отмечает на табло (факт прибытия, сканирование наклеек), ждёт в очереди и отправляется, когда сеть вернётся. Карта, междугороднее табло и бронирование требуют сети — см. ниже.</td>
+              </tr>
+              <tr>
+                <td data-i18n="p6Name">6. Совместимость — право</td>
+                <td><span class="case-status case-status--done" data-i18n="stDone">сделано</span></td>
+                <td data-i18n-html="p6HTML">Фид подан в <a href="https://github.com/transitland/transitland-atlas/pull/2260">Transitland</a> и <a href="https://github.com/MobilityData/mobility-database-catalogs/pull/1751">Mobility Database</a> (на рассмотрении); id остановок и маршрутов — опубликованный контракт, объединённая остановка отвечает 301 (<a href="https://malin.kiev.ua/transport/stop-redirects">карта перенаправлений</a>).</td>
+              </tr>
+              <tr>
+                <td data-i18n="p7Name">7. Прозрачность вместо доверия</td>
+                <td><span class="case-status case-status--partly" data-i18n="stPartly">частично</span></td>
+                <td data-i18n-html="p7HTML">Код сайта, бэкенда и бота <a href="https://github.com/drivling/kyiv-malyn-booking">открыт</a>, каждое решение записано (см. «Документация по-честному»), каждое изменение данных оставляет строку в журнале. Subresource integrity для бандла и видимый id сборки на сайте не сделаны.</td>
+              </tr>
+              <tr>
+                <td data-i18n="p8Name">8. Ремонт, изменение, форк</td>
+                <td><span class="case-status case-status--partly" data-i18n="stPartly">частично</span></td>
+                <td data-i18n-html="p8HTML">Лицензия разрешает форк и изменения на тех же условиях, репозиторий полный. Инструкции «поднять свою копию» пока нет.</td>
+              </tr>
+              <tr>
+                <td data-i18n="p9Name">9. Протоколы важнее платформ</td>
+                <td><span class="case-status case-status--done" data-i18n="stDoneTransport">сделано для /transport</span></td>
+                <td data-i18n-html="p9HTML">Данные уходят с сайта через GTFS, RSS, iCal и обычный HTTP — чтобы ими пользоваться, не нужны ни наше приложение, ни наш бот; Telegram-бот — один канал из нескольких. Доска попутчиков по-прежнему берёт источник из групп Viber и Telegram, но публикует в открытом вебе.</td>
+              </tr>
+              <tr>
+                <td data-i18n="p10Name">10. Цифровой суверенитет — гражданский суверенитет</td>
+                <td><span class="case-status case-status--partly" data-i18n="stPartly">частично</span></td>
+                <td data-i18n-html="p10HTML">Базу собрали жители, а не купили у платформы; город может бесплатно взять фид и разместить у себя. Хостинг арендован (Railway, Cloudflare): данные и код переносимы, инфраструктура не наша.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="case-section" id="data">
+        <h2 data-i18n="caseDataTitle">Откуда данные</h2>
+        <p data-i18n-html="caseDataHTML">Структурированного расписания для Малина не было. Автор сайта стоял на остановке «Прожектор» и не знал, какие автобусы здесь останавливаются и когда придёт следующий. То, что было открыто, — названия остановок, примерный перечень маршрутов, сфотографированные «листочки» горсовета — собрали вручную, структурировали и проверили на месте; QR-наклейки на остановках теперь ведут на табло этой остановки. Историю рассказала местная газета: <a href="https://malyn.media/novyny/misto/stoiav-na-zupyntsi-y-ne-znav-iakyy-avtobus-chekaty-malynets-stvoryv-servis-iz-rozkladamy-transportu/">«Стоял на остановке и не знал, какой автобус ждать»</a> (malyn.media, 7 октября 2026) и её <a href="https://malyn.media/novyny/misto/u-malyni-onovyly-servis-yak-doikhaty-dodaly-marshrut-10-i-novu-funktsiiu/">продолжение</a> (14 октября 2026).</p>
+        <p data-i18n-html="caseLicenseHTML">Эта собранная руками база — причина, почему лицензия <a href="/ru/license.html">OwnNet</a>, а не Creative Commons: бесплатно для людей, обучения, города и малого бизнеса; производные базы остаются на тех же условиях; корпорациям и платным приложениям — по договору. Цена известна и принята: Google Maps и Apple Maps не берут фиды с такими условиями. Сами факты — что автобус №5 отправляется в 7:10 — не принадлежат никому; лицензия касается собранной базы, а не фактов.</p>
+      </section>
+
+      <section class="case-section" id="offline">
+        <h2 data-i18n="caseOfflineTitle">Что работает без сети, а что нет</h2>
+        <div class="case-two">
+          <p data-i18n-html="caseOfflineYesHTML"><strong>Без интернета и без нашего сервера</strong> (после одного посещения онлайн, во вкладке браузера или в установленном приложении «Як доїхати» — «Как доехать»): табло остановки, расписание маршрута, планировщик между остановками, схема маршрутов. Полоса состояния говорит правду — «Без сети — расписание по состоянию на …» или «Сервер не отвечает — показываем сохранённое расписание»; когда сеть возвращается, данные обновляются сами, а новая версия сайта никогда не ломает открытую страницу.</p>
+          <p data-i18n-html="caseOfflineNoHTML"><strong>Требует сети:</strong> подложка карты (тайлы OpenStreetMap не кешируем — их политика использования; карту заменяет схема), междугороднее табло (попутки, маршрутки, электрички — живые данные), бронирование, справка, админка и самое первое открытие. «Расписание» — плановая таблица по состоянию на последнюю синхронизацию, а не живое положение автобусов: его на сайте и не было.</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="not-done">
+        <h2 data-i18n="caseNotTitle">Чего мы сознательно не сделали</h2>
+        <ul class="case-list">
+          <li data-i18n-html="caseNot1HTML">Карта офлайн: тайлы OpenStreetMap не кешируем по их политике; эту работу делает схема маршрутов.</li>
+          <li data-i18n-html="caseNot2HTML">Google Maps и Apple Maps: им нужна лицензия без share-alike; для собранной руками базы мы оставили условия OwnNet.</li>
+          <li data-i18n-html="caseNot3HTML">GTFS-Realtime: данных о том, где автобусы, нет — только отметки пассажиров «автобус здесь» на сайте.</li>
+          <li data-i18n-html="caseNot4HTML">Междугородние рейсы в GTFS: фид покрывает только городские автобусы.</li>
+        </ul>
+      </section>
+
+      <section class="case-section" id="docs">
+        <h2 data-i18n="caseDocsTitle">Документация по-честному</h2>
+        <p data-i18n-html="caseDocsHTML">Каждый этап вёлся из «файла восстановления» в репозитории: проблема как есть, решения с причинами, чеклист и находки — включая то, что пошло не так. Это и есть документация кейса: <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-pwa-2026-10.md">табло без сети и приложение</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-offline-writes-2026-10.md">записи без сети</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-data-2026-10.md">открытые данные и решение о лицензии</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-protocols-2026-10.md">открытые протоколы</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-revisions-2026-10.md">журнал ревизий</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/manifesto-communication-2026-10.md">эта страница</a>. Для тех, кому нужны данные: <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-data.md">transport-open-data.md</a>.</p>
+        <p class="case-footer-note" data-i18n-html="caseFooterHTML">Страница обновляется, когда меняется состояние. Вопросы о данных или лицензии: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a>.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><a href="https://own-net.com">own-net.com</a> — OwnNet / Internet 4.0 · <span class="footer-contact"><a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a> (© 2026 Serhii Merenkov / Technologies LLC.)</span></p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var STORAGE_KEY = 'ownnet-lang';
+    var supported = { en: true, ru: true, uk: true };
+
+    var t = {
+      en: {
+        casePageTitle: 'Case: malin.kiev.ua against the ten principles | OwnNet',
+        caseMetaDescription: 'How a city transport site in Malyn, Ukraine, was brought in line with the Manifesto of the Open Internet 4.0: offline stop boards, open GTFS data, open protocols — and what is still missing.',
+        caseBackLink: '← Back to manifesto',
+        caseKicker: 'Case study',
+        caseTitle: 'malin.kiev.ua: a city transport site measured against the ten principles',
+        caseLead: 'Malyn is a town in Zhytomyr Oblast, Ukraine, north-west of Kyiv. Its stop boards and bus timetables live on malin.kiev.ua. In October 2026 we checked the site against the manifesto, principle by principle, and fixed what we could. This page says what was done, what was done half-way, and what we chose not to do.',
+        caseMetaHTML: 'Site: <a href="https://malin.kiev.ua/">malin.kiev.ua</a> · Code: <a href="https://github.com/drivling/kyiv-malyn-booking">github.com/drivling/kyiv-malyn-booking</a> · License of the code and the data: <a href="/license.html">OwnNet Source License 1.1</a> · Status as of 19 October 2026.',
+        caseWhyTitle: 'Where it started',
+        caseWhyHTML: 'A reviewer of this manifesto pointed at principle 5: <em>every essential system must degrade gracefully and function without central servers</em>. If the stop boards of malin.kiev.ua do not open without a network, a strong sentence on this site turns against its author. On 15 October 2026 the check was honest: no service worker, no app manifest, the timetable lived only in the open tab. Four stages of work later the site is different — and this page is the last stage: saying exactly what is true now.',
+        caseTableTitle: 'Ten principles, honestly',
+        caseTableNoteHTML: 'Statuses: <strong>done</strong> — verified on the production site and has an address you can open; <strong>partly</strong> — the code exists, but known limits remain; <strong>n/a</strong> — the principle is about hardware.',
+        thPrinciple: 'Principle',
+        thStatus: 'Status',
+        thEvidence: 'What it rests on',
+        stDone: 'done',
+        stDoneTransport: 'done for /transport',
+        stPartly: 'partly',
+        stNa: 'n/a',
+        p1Name: '1. Digital ownership is real ownership',
+        p1HTML: 'The installed app and the saved timetable keep working when our server is down; the whole database can be taken away as <a href="https://malin.kiev.ua/transport/gtfs.zip">GTFS</a> or JSON. But the domain and the hosting are still ours — an installed copy that outlives the domain is not built yet.',
+        p2Name: '2. Devices must work without permission',
+        p2HTML: 'There is no hardware. The transport section needs no account and installs from the browser without an app store: Chrome\'s own banner on Android, a three-step card on iPhone.',
+        p3Name: '3. Software is infrastructure',
+        p3HTML: 'Open standards all the way: <a href="https://malin.kiev.ua/transport/gtfs.zip">GTFS Static</a> (MobilityData validator: 0 errors), <a href="https://malin.kiev.ua/openapi.yaml">OpenAPI 3.1</a> with a <a href="https://malin.kiev.ua/support/api">help page</a>, <a href="https://malin.kiev.ua/transport/changes.rss">RSS</a>, iCalendar per route (<a href="https://malin.kiev.ua/transport/route/2/calendar.ics">example</a>), HTTP caching with ETag.',
+        p4Name: '4. Data belongs to the individual',
+        p4HTML: 'The timetable — yes: GTFS and JSON under a stated license, with a <a href="https://malin.kiev.ua/transport/revisions">revision journal</a> of every change. A person\'s own data (bookings, the profile in the bot) — export and erasure are still a written plan, not code.',
+        p5Name: '5. Offline first',
+        p5HTML: 'Stop boards, route timetables, the route diagram and the trip planner of <a href="https://malin.kiev.ua/transport">/transport</a> open without a network and without the backend after the first visit; what a person taps on the board (arrival reports, sticker scans) waits in a queue and is sent when the network returns. The map tiles, the intercity board and booking need a network — see below.',
+        p6Name: '6. Interoperability is a right',
+        p6HTML: 'The feed is submitted to <a href="https://github.com/transitland/transitland-atlas/pull/2260">Transitland</a> and the <a href="https://github.com/MobilityData/mobility-database-catalogs/pull/1751">Mobility Database</a> (under review); stop and route ids are a published contract, and a merged stop answers with a 301 (<a href="https://malin.kiev.ua/transport/stop-redirects">redirect map</a>).',
+        p7Name: '7. Transparency over trust',
+        p7HTML: 'The code of the site, the backend and the bot is <a href="https://github.com/drivling/kyiv-malyn-booking">public</a>, every decision is written down (see “Documentation, honestly”), every change to the data leaves a row in the journal. Subresource integrity for the bundle and a visible build id on the site are not done.',
+        p8Name: '8. Repair, modify, fork',
+        p8HTML: 'The license allows forking and modifying under the same terms, and the repository is complete. A “run your own copy” guide is still missing.',
+        p9Name: '9. Protocols over platforms',
+        p9HTML: 'The data leaves the site through GTFS, RSS, iCal and plain HTTP — nobody needs our app or our bot to use it; the Telegram bot is one channel among several. The rideshare board still takes its source from Viber and Telegram groups, but publishes on the open web.',
+        p10Name: '10. Digital sovereignty is civil sovereignty',
+        p10HTML: 'The database was collected by residents, not bought from a platform; the city can take the feed for free and host it itself. The hosting is rented (Railway, Cloudflare): the data and the code are portable, the infrastructure is not ours.',
+        caseDataTitle: 'Where the data comes from',
+        caseDataHTML: 'There was no structured timetable for Malyn. The author of the site stood at the “Prozhektor” stop and did not know which buses stop there or when the next one comes. What was public — stop names, a rough list of routes, photographed timetable sheets from the city council — was collected by hand, structured and checked on site; QR stickers on the stops now lead to the board of that stop. The story is told by the local paper: <a href="https://malyn.media/novyny/misto/stoiav-na-zupyntsi-y-ne-znav-iakyy-avtobus-chekaty-malynets-stvoryv-servis-iz-rozkladamy-transportu/">“I stood at the stop and did not know which bus to wait for”</a> (malyn.media, 7 October 2026) and its <a href="https://malyn.media/novyny/misto/u-malyni-onovyly-servis-yak-doikhaty-dodaly-marshrut-10-i-novu-funktsiiu/">follow-up</a> (14 October 2026).',
+        caseLicenseHTML: 'That hand-made database is why the license is <a href="/license.html">OwnNet</a> rather than Creative Commons: free for people, education, the city and small business; derived databases stay under the same terms; corporations and paid apps need an agreement. The price is known and accepted: Google Maps and Apple Maps do not take feeds with such terms. The bare facts — that bus 5 leaves at 7:10 — belong to nobody; the license covers the collected database, not the facts.',
+        caseOfflineTitle: 'What works without a network, and what does not',
+        caseOfflineYesHTML: '<strong>Without internet and without our server</strong> (after one online visit, in a browser tab or in the installed app “Yak doikhaty” — “How to get there”): the stop board, the route timetable, the trip planner between stops, the route diagram. A status bar tells the truth — “No network — timetable as of …” or “Server not responding — showing the saved timetable”; when the network is back the data refreshes itself, and a new site version never breaks an open page.',
+        caseOfflineNoHTML: '<strong>Needs a network:</strong> the map background (OpenStreetMap tiles are not cached — their usage policy; the diagram replaces the map), the intercity board (rideshares, minibuses, trains are live data), booking, help, the admin area, and the very first visit. “Timetable” means the planned table as of the last sync, not the live position of buses — the site never had that.',
+        caseNotTitle: 'What we deliberately did not do',
+        caseNot1HTML: 'Offline map: OpenStreetMap tiles are not cached, by their policy; the route diagram does that job.',
+        caseNot2HTML: 'Google Maps and Apple Maps: they require a license without share-alike; we kept the OwnNet terms for the hand-made database.',
+        caseNot3HTML: 'GTFS-Realtime: there is no data about where the buses are — only passengers\' “the bus is here” reports on the site.',
+        caseNot4HTML: 'Intercity trips in GTFS: the feed covers the city buses only.',
+        caseDocsTitle: 'Documentation, honestly',
+        caseDocsHTML: 'Each stage was run from a “recovery file” in the repository: the problem as found, the decisions with their reasons, a checklist, and the findings — including what went wrong. They are the documentation of this case: <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-pwa-2026-10.md">offline boards and the app</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-offline-writes-2026-10.md">offline writes</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-data-2026-10.md">open data and the license decision</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-protocols-2026-10.md">open protocols</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-revisions-2026-10.md">revision journal</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/manifesto-communication-2026-10.md">this page</a>. For people who want the data: <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-data.md">transport-open-data.md</a>.',
+        caseFooterHTML: 'This page is updated when the status changes. Questions about the data or the license: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a>.'
+      },
+      ru: {
+        casePageTitle: 'Кейс: malin.kiev.ua и десять принципов | OwnNet',
+        caseMetaDescription: 'Как сайт городского транспорта Малина (Украина) привели в соответствие с Манифестом открытого интернета 4.0: табло остановок без сети, открытые данные GTFS, открытые протоколы — и чего ещё нет.',
+        caseBackLink: '← Назад к манифесту',
+        caseKicker: 'Кейс',
+        caseTitle: 'malin.kiev.ua: сайт городского транспорта, сверенный с десятью принципами',
+        caseLead: 'Малин — город в Житомирской области Украины, к северо-западу от Киева. Его табло остановок и расписания автобусов живут на malin.kiev.ua. В октябре 2026 года мы сверили сайт с манифестом, принцип за принципом, и исправили то, что смогли. Эта страница говорит, что сделано, что сделано наполовину и чего мы решили не делать.',
+        caseMetaHTML: 'Сайт: <a href="https://malin.kiev.ua/">malin.kiev.ua</a> · Код: <a href="https://github.com/drivling/kyiv-malyn-booking">github.com/drivling/kyiv-malyn-booking</a> · Лицензия кода и данных: <a href="/ru/license.html">OwnNet Source License 1.1</a> · Состояние на 19 октября 2026 года.',
+        caseWhyTitle: 'С чего всё началось',
+        caseWhyHTML: 'Рецензент этого манифеста указал на принцип 5: <em>каждая важная система должна корректно деградировать и работать без центральных серверов</em>. Если табло остановок malin.kiev.ua не открывается без сети, сильная фраза на этом сайте оборачивается против его автора. 15 октября 2026 года проверка была честной: ни service worker, ни манифеста приложения, расписание жило только в открытой вкладке. Четыре этапа работы спустя сайт другой — и эта страница последний этап: сказать ровно то, что верно сейчас.',
+        caseTableTitle: 'Десять принципов, честно',
+        caseTableNoteHTML: 'Статусы: <strong>сделано</strong> — проверено на боевом сайте и имеет адрес, который можно открыть; <strong>частично</strong> — код есть, но известные границы остаются; <strong>не касается</strong> — принцип об аппаратуре.',
+        thPrinciple: 'Принцип',
+        thStatus: 'Статус',
+        thEvidence: 'На чём держится',
+        stDone: 'сделано',
+        stDoneTransport: 'сделано для /transport',
+        stPartly: 'частично',
+        stNa: 'не касается',
+        p1Name: '1. Цифровая собственность — настоящая собственность',
+        p1HTML: 'Установленное приложение и сохранённое расписание работают, когда наш сервер лежит; всю базу можно забрать как <a href="https://malin.kiev.ua/transport/gtfs.zip">GTFS</a> или JSON. Но домен и хостинг пока наши — установленная копия, которая переживёт домен, ещё не построена.',
+        p2Name: '2. Устройства должны работать без разрешения',
+        p2HTML: 'Аппаратуры нет. Раздел транспорта не требует аккаунта и устанавливается из браузера без магазина приложений: собственный баннер Chrome на Android, карточка с тремя шагами на iPhone.',
+        p3Name: '3. ПО — это инфраструктура',
+        p3HTML: 'Открытые стандарты насквозь: <a href="https://malin.kiev.ua/transport/gtfs.zip">GTFS Static</a> (валидатор MobilityData: 0 ошибок), <a href="https://malin.kiev.ua/openapi.yaml">OpenAPI 3.1</a> со <a href="https://malin.kiev.ua/support/api">страницей справки</a>, <a href="https://malin.kiev.ua/transport/changes.rss">RSS</a>, iCalendar для каждого маршрута (<a href="https://malin.kiev.ua/transport/route/2/calendar.ics">пример</a>), HTTP-кеш с ETag.',
+        p4Name: '4. Данные принадлежат человеку',
+        p4HTML: 'Расписание — да: GTFS и JSON под указанной лицензией, с <a href="https://malin.kiev.ua/transport/revisions">журналом ревизий</a> каждого изменения. Собственные данные человека (бронирования, профиль в боте) — экспорт и удаление пока записанный план, а не код.',
+        p5Name: '5. Сначала офлайн',
+        p5HTML: 'Табло остановок, расписания маршрутов, схема и планировщик <a href="https://malin.kiev.ua/transport">/transport</a> открываются без сети и без бэкенда после первого посещения; то, что человек отмечает на табло (факт прибытия, сканирование наклеек), ждёт в очереди и отправляется, когда сеть вернётся. Карта, междугороднее табло и бронирование требуют сети — см. ниже.',
+        p6Name: '6. Совместимость — право',
+        p6HTML: 'Фид подан в <a href="https://github.com/transitland/transitland-atlas/pull/2260">Transitland</a> и <a href="https://github.com/MobilityData/mobility-database-catalogs/pull/1751">Mobility Database</a> (на рассмотрении); id остановок и маршрутов — опубликованный контракт, объединённая остановка отвечает 301 (<a href="https://malin.kiev.ua/transport/stop-redirects">карта перенаправлений</a>).',
+        p7Name: '7. Прозрачность вместо доверия',
+        p7HTML: 'Код сайта, бэкенда и бота <a href="https://github.com/drivling/kyiv-malyn-booking">открыт</a>, каждое решение записано (см. «Документация по-честному»), каждое изменение данных оставляет строку в журнале. Subresource integrity для бандла и видимый id сборки на сайте не сделаны.',
+        p8Name: '8. Ремонт, изменение, форк',
+        p8HTML: 'Лицензия разрешает форк и изменения на тех же условиях, репозиторий полный. Инструкции «поднять свою копию» пока нет.',
+        p9Name: '9. Протоколы важнее платформ',
+        p9HTML: 'Данные уходят с сайта через GTFS, RSS, iCal и обычный HTTP — чтобы ими пользоваться, не нужны ни наше приложение, ни наш бот; Telegram-бот — один канал из нескольких. Доска попутчиков по-прежнему берёт источник из групп Viber и Telegram, но публикует в открытом вебе.',
+        p10Name: '10. Цифровой суверенитет — гражданский суверенитет',
+        p10HTML: 'Базу собрали жители, а не купили у платформы; город может бесплатно взять фид и разместить у себя. Хостинг арендован (Railway, Cloudflare): данные и код переносимы, инфраструктура не наша.',
+        caseDataTitle: 'Откуда данные',
+        caseDataHTML: 'Структурированного расписания для Малина не было. Автор сайта стоял на остановке «Прожектор» и не знал, какие автобусы здесь останавливаются и когда придёт следующий. То, что было открыто, — названия остановок, примерный перечень маршрутов, сфотографированные «листочки» горсовета — собрали вручную, структурировали и проверили на месте; QR-наклейки на остановках теперь ведут на табло этой остановки. Историю рассказала местная газета: <a href="https://malyn.media/novyny/misto/stoiav-na-zupyntsi-y-ne-znav-iakyy-avtobus-chekaty-malynets-stvoryv-servis-iz-rozkladamy-transportu/">«Стоял на остановке и не знал, какой автобус ждать»</a> (malyn.media, 7 октября 2026) и её <a href="https://malyn.media/novyny/misto/u-malyni-onovyly-servis-yak-doikhaty-dodaly-marshrut-10-i-novu-funktsiiu/">продолжение</a> (14 октября 2026).',
+        caseLicenseHTML: 'Эта собранная руками база — причина, почему лицензия <a href="/ru/license.html">OwnNet</a>, а не Creative Commons: бесплатно для людей, обучения, города и малого бизнеса; производные базы остаются на тех же условиях; корпорациям и платным приложениям — по договору. Цена известна и принята: Google Maps и Apple Maps не берут фиды с такими условиями. Сами факты — что автобус №5 отправляется в 7:10 — не принадлежат никому; лицензия касается собранной базы, а не фактов.',
+        caseOfflineTitle: 'Что работает без сети, а что нет',
+        caseOfflineYesHTML: '<strong>Без интернета и без нашего сервера</strong> (после одного посещения онлайн, во вкладке браузера или в установленном приложении «Як доїхати» — «Как доехать»): табло остановки, расписание маршрута, планировщик между остановками, схема маршрутов. Полоса состояния говорит правду — «Без сети — расписание по состоянию на …» или «Сервер не отвечает — показываем сохранённое расписание»; когда сеть возвращается, данные обновляются сами, а новая версия сайта никогда не ломает открытую страницу.',
+        caseOfflineNoHTML: '<strong>Требует сети:</strong> подложка карты (тайлы OpenStreetMap не кешируем — их политика использования; карту заменяет схема), междугороднее табло (попутки, маршрутки, электрички — живые данные), бронирование, справка, админка и самое первое открытие. «Расписание» — плановая таблица по состоянию на последнюю синхронизацию, а не живое положение автобусов: его на сайте и не было.',
+        caseNotTitle: 'Чего мы сознательно не сделали',
+        caseNot1HTML: 'Карта офлайн: тайлы OpenStreetMap не кешируем по их политике; эту работу делает схема маршрутов.',
+        caseNot2HTML: 'Google Maps и Apple Maps: им нужна лицензия без share-alike; для собранной руками базы мы оставили условия OwnNet.',
+        caseNot3HTML: 'GTFS-Realtime: данных о том, где автобусы, нет — только отметки пассажиров «автобус здесь» на сайте.',
+        caseNot4HTML: 'Междугородние рейсы в GTFS: фид покрывает только городские автобусы.',
+        caseDocsTitle: 'Документация по-честному',
+        caseDocsHTML: 'Каждый этап вёлся из «файла восстановления» в репозитории: проблема как есть, решения с причинами, чеклист и находки — включая то, что пошло не так. Это и есть документация кейса: <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-pwa-2026-10.md">табло без сети и приложение</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-offline-writes-2026-10.md">записи без сети</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-data-2026-10.md">открытые данные и решение о лицензии</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-protocols-2026-10.md">открытые протоколы</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-revisions-2026-10.md">журнал ревизий</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/manifesto-communication-2026-10.md">эта страница</a>. Для тех, кому нужны данные: <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-data.md">transport-open-data.md</a>.',
+        caseFooterHTML: 'Страница обновляется, когда меняется состояние. Вопросы о данных или лицензии: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a>.'
+      },
+      uk: {
+        casePageTitle: 'Кейс: malin.kiev.ua і десять принципів | OwnNet',
+        caseMetaDescription: 'Як сайт міського транспорту Малина привели у відповідність до Маніфесту відкритого інтернету 4.0: табло зупинок без мережі, відкриті дані GTFS, відкриті протоколи — і чого ще нема.',
+        caseBackLink: '← Назад до маніфесту',
+        caseKicker: 'Кейс',
+        caseTitle: 'malin.kiev.ua: сайт міського транспорту, звірений із десятьма принципами',
+        caseLead: 'Малин — місто в Житомирській області, на північний захід від Києва. Його табло зупинок і розклади автобусів живуть на malin.kiev.ua. У жовтні 2026 року ми звірили сайт із маніфестом, принцип за принципом, і виправили те, що змогли. Ця сторінка каже, що зроблено, що зроблено наполовину і чого ми вирішили не робити.',
+        caseMetaHTML: 'Сайт: <a href="https://malin.kiev.ua/">malin.kiev.ua</a> · Код: <a href="https://github.com/drivling/kyiv-malyn-booking">github.com/drivling/kyiv-malyn-booking</a> · Ліцензія коду і даних: <a href="/uk/license.html">OwnNet Source License 1.1</a> · Стан на 19 жовтня 2026 року.',
+        caseWhyTitle: 'З чого все почалося',
+        caseWhyHTML: 'Рецензент цього маніфесту вказав на принцип 5: <em>кожна важлива система має коректно деградувати та працювати без центральних серверів</em>. Якщо табло зупинок malin.kiev.ua не відкривається без мережі, сильна фраза на цьому сайті обертається проти його автора. 15 жовтня 2026 року перевірка була чесною: ні service worker, ні маніфесту застосунку, розклад жив лише у відкритій вкладці. Чотири етапи роботи по тому сайт інший — і ця сторінка є останнім етапом: сказати рівно те, що правдиве зараз.',
+        caseTableTitle: 'Десять принципів, чесно',
+        caseTableNoteHTML: 'Статуси: <strong>зроблено</strong> — перевірено на бойовому сайті й має адресу, яку можна відкрити; <strong>частково</strong> — код є, але відомі межі лишаються; <strong>не стосується</strong> — принцип про апаратуру.',
+        thPrinciple: 'Принцип',
+        thStatus: 'Статус',
+        thEvidence: 'На чому тримається',
+        stDone: 'зроблено',
+        stDoneTransport: 'зроблено для /transport',
+        stPartly: 'частково',
+        stNa: 'не стосується',
+        p1Name: '1. Цифрова власність — справжня власність',
+        p1HTML: 'Встановлений застосунок і збережений розклад працюють, коли наш сервер лежить; усю базу можна забрати як <a href="https://malin.kiev.ua/transport/gtfs.zip">GTFS</a> або JSON. Але домен і хостинг поки наші — встановлена копія, яка переживе домен, ще не збудована.',
+        p2Name: '2. Пристрої мають працювати без дозволу',
+        p2HTML: 'Апаратури нема. Розділ транспорту не потребує акаунта й ставиться з браузера без магазину застосунків: власний банер Chrome на Android, картка з трьома кроками на iPhone.',
+        p3Name: '3. ПЗ — це інфраструктура',
+        p3HTML: 'Відкриті стандарти наскрізь: <a href="https://malin.kiev.ua/transport/gtfs.zip">GTFS Static</a> (валідатор MobilityData: 0 помилок), <a href="https://malin.kiev.ua/openapi.yaml">OpenAPI 3.1</a> зі <a href="https://malin.kiev.ua/support/api">сторінкою довідки</a>, <a href="https://malin.kiev.ua/transport/changes.rss">RSS</a>, iCalendar для кожного маршруту (<a href="https://malin.kiev.ua/transport/route/2/calendar.ics">приклад</a>), HTTP-кеш з ETag.',
+        p4Name: '4. Дані належать людині',
+        p4HTML: 'Розклад — так: GTFS і JSON під зазначеною ліцензією, з <a href="https://malin.kiev.ua/transport/revisions">журналом ревізій</a> кожної зміни. Власні дані людини (бронювання, профіль у боті) — експорт і видалення поки записаний план, а не код.',
+        p5Name: '5. Спочатку офлайн',
+        p5HTML: 'Табло зупинок, розклади маршрутів, схема і планер <a href="https://malin.kiev.ua/transport">/transport</a> відкриваються без мережі й без бекенду після першого відвідування; те, що людина відмічає на табло (факт прибуття, сканування наклейок), чекає в черзі й відправляється, коли мережа повернеться. Карта, міжміське табло та бронювання потребують мережі — див. нижче.',
+        p6Name: '6. Сумісність — право',
+        p6HTML: 'Фід подано в <a href="https://github.com/transitland/transitland-atlas/pull/2260">Transitland</a> і <a href="https://github.com/MobilityData/mobility-database-catalogs/pull/1751">Mobility Database</a> (на розгляді); id зупинок і маршрутів — опублікований контракт, злита зупинка відповідає 301 (<a href="https://malin.kiev.ua/transport/stop-redirects">мапа перенаправлень</a>).',
+        p7Name: '7. Прозорість замість довіри',
+        p7HTML: 'Код сайту, бекенду й бота <a href="https://github.com/drivling/kyiv-malyn-booking">відкритий</a>, кожне рішення записане (див. «Документація по-чесному»), кожна зміна даних лишає рядок у журналі. Subresource integrity для бандла і видимий id збірки на сайті не зроблені.',
+        p8Name: '8. Ремонт, зміна, форк',
+        p8HTML: 'Ліцензія дозволяє форк і зміни на тих самих умовах, репозиторій повний. Інструкції «підняти свою копію» ще нема.',
+        p9Name: '9. Протоколи важливіші за платформи',
+        p9HTML: 'Дані виходять із сайту через GTFS, RSS, iCal і звичайний HTTP — щоб ними користуватися, не потрібні ні наш застосунок, ні наш бот; Telegram-бот — один канал із кількох. Дошка попутників досі бере джерело з груп Viber і Telegram, але публікує у відкритому вебі.',
+        p10Name: '10. Цифровий суверенітет — громадянський суверенітет',
+        p10HTML: 'Базу зібрали мешканці, а не купили в платформи; місто може безкоштовно взяти фід і розмістити в себе. Хостинг орендований (Railway, Cloudflare): дані й код переносні, інфраструктура не наша.',
+        caseDataTitle: 'Звідки дані',
+        caseDataHTML: 'Структурованого розкладу для Малина не було. Автор сайту стояв на зупинці «Прожектор» і не знав, які автобуси тут зупиняються і коли прийде наступний. Те, що було відкрите, — назви зупинок, приблизний перелік маршрутів, сфотографовані «листочки» міськради — зібрали вручну, структурували й перевірили на місці; QR-наклейки на зупинках тепер ведуть на табло цієї зупинки. Історію розповіла місцева газета: <a href="https://malyn.media/novyny/misto/stoiav-na-zupyntsi-y-ne-znav-iakyy-avtobus-chekaty-malynets-stvoryv-servis-iz-rozkladamy-transportu/">«Стояв на зупинці й не знав, який автобус чекати»</a> (malyn.media, 7 жовтня 2026) і її <a href="https://malyn.media/novyny/misto/u-malyni-onovyly-servis-yak-doikhaty-dodaly-marshrut-10-i-novu-funktsiiu/">продовження</a> (14 жовтня 2026).',
+        caseLicenseHTML: 'Ця зібрана руками база — причина, чому ліцензія <a href="/uk/license.html">OwnNet</a>, а не Creative Commons: вільно для людей, навчання, міста й малого бізнесу; похідні бази лишаються на тих самих умовах; корпораціям і платним застосункам — за договором. Ціна відома і прийнята: Google Maps і Apple Maps не беруть фідів з такими умовами. Самі факти — що автобус №5 відправляється о 7:10 — нікому не належать; ліцензія стосується зібраної бази, а не фактів.',
+        caseOfflineTitle: 'Що працює без мережі, а що ні',
+        caseOfflineYesHTML: '<strong>Без інтернету й без нашого сервера</strong> (після одного відвідування онлайн, у вкладці браузера або у встановленому застосунку «Як доїхати»): табло зупинки, розклад маршруту, планер між зупинками, схема маршрутів. Смужка стану каже правду — «Без мережі — розклад станом на …» або «Сервер не відповідає — показуємо збережений розклад»; коли мережа повертається, дані оновлюються самі, а нова версія сайту ніколи не ламає відкриту сторінку.',
+        caseOfflineNoHTML: '<strong>Потребує мережі:</strong> підкладка карти (тайли OpenStreetMap не кешуємо — їхня політика використання; карту замінює схема), міжміське табло (попутки, маршрутки, електрички — живі дані), бронювання, довідка, адмінка й найперше відкриття. «Розклад» — планова таблиця станом на останню синхронізацію, а не живе положення автобусів: його на сайті й не було.',
+        caseNotTitle: 'Чого ми свідомо не зробили',
+        caseNot1HTML: 'Карта офлайн: тайли OpenStreetMap не кешуємо за їхньою політикою; цю роботу робить схема маршрутів.',
+        caseNot2HTML: 'Google Maps і Apple Maps: їм потрібна ліцензія без share-alike; для зібраної руками бази ми лишили умови OwnNet.',
+        caseNot3HTML: 'GTFS-Realtime: даних про те, де автобуси, нема — лише відмітки пасажирів «автобус тут» на сайті.',
+        caseNot4HTML: 'Міжміські рейси у GTFS: фід покриває лише міські автобуси.',
+        caseDocsTitle: 'Документація по-чесному',
+        caseDocsHTML: 'Кожен етап вівся з «файлу відновлення» в репозиторії: проблема як є, рішення з причинами, чекліст і знахідки — включно з тим, що пішло не так. Це і є документація кейсу: <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-pwa-2026-10.md">табло без мережі й застосунок</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-offline-writes-2026-10.md">записи без мережі</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-data-2026-10.md">відкриті дані й рішення про ліцензію</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-protocols-2026-10.md">відкриті протоколи</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-revisions-2026-10.md">журнал ревізій</a>, <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/manifesto-communication-2026-10.md">ця сторінка</a>. Для тих, кому потрібні дані: <a href="https://github.com/drivling/kyiv-malyn-booking/blob/main/Docs/transport-open-data.md">transport-open-data.md</a>.',
+        caseFooterHTML: 'Сторінка оновлюється, коли змінюється стан. Питання про дані чи ліцензію: <a href="mailto:mer.sergei@gmail.com">mer.sergei@gmail.com</a>.'
+      }
+    };
+
+    // Each language lives at its own URL (/cases/malin/, /ru/cases/malin/, /uk/cases/malin/);
+    // the page language is taken from the URL, the stored choice only redirects first-time
+    // visitors of the English URL (same rules as the home page and the license page).
+    function storedLang() {
+      try {
+        var v = localStorage.getItem(STORAGE_KEY);
+        return supported[v] ? v : null;
+      } catch (e) { return null; }
+    }
+
+    function storeLang(lang) {
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    }
+
+    function browserLang() {
+      var b = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+      return supported[b] ? b : 'en';
+    }
+
+    function pathLang() {
+      var m = window.location.pathname.match(/^\/(ru|uk)(\/|$)/);
+      return m ? m[1] : 'en';
+    }
+
+    function applyLang(lang) {
+      if (!supported[lang]) lang = 'en';
+      document.documentElement.lang = lang;
+      var strings = t[lang];
+
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (strings[key] !== undefined) el.textContent = strings[key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (strings[key] !== undefined) el.innerHTML = strings[key];
+      });
+
+      document.title = strings.casePageTitle;
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        var isActive = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', isActive);
+        if (isActive) btn.setAttribute('aria-current', 'page');
+        else btn.removeAttribute('aria-current');
+      });
+    }
+
+    var lang = pathLang();
+    applyLang(lang);
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        storeLang(btn.getAttribute('data-lang'));
+      });
+    });
+
+    if (lang === 'en' && /^https?:$/.test(window.location.protocol)) {
+      var want = storedLang() || browserLang();
+      if (want !== 'en') {
+        window.location.replace('/' + want + window.location.pathname + window.location.search + window.location.hash);
+      }
+    }
+  })();
+  </script>
+</body>
+</html>

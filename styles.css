@@ -167,6 +167,22 @@ a.lang-btn {
   color: var(--fg);
 }
 
+.manifesto-example {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.manifesto-example a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201,162,39,.5);
+}
+
+.manifesto-example a:hover {
+  color: var(--accent);
+}
+
 .manifesto-list li:not(:last-child) {
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255,255,255,.06);
@@ -210,6 +226,23 @@ a.lang-btn {
   color: var(--muted);
   font-size: 0.95rem;
   max-width: 560px;
+}
+
+.license-data {
+  margin: -0.75rem 0 1.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 560px;
+}
+
+.license-data a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201,162,39,.5);
+}
+
+.license-data a:hover {
+  color: var(--accent);
 }
 
 .license-cols {
